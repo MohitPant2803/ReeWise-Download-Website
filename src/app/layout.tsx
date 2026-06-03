@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ReeWise — Calm Revision for IIT Kharagpur",
-  description: "Stop restarting. Start revisiting. ReeWise is a calm, scrollable revision app built by a KGPian for KGPians to make placement & internship prep feel lighter.",
-  keywords: ["ReeWise", "IIT Kharagpur", "KGP", "CDC Preparation", "DSA Reels", "Calm Revision", "Active Recall"],
-  authors: [{ name: "KGPian" }],
+  title: "ReeWise — Calm Revision",
+  description: "Stop restarting. Start revisiting. ReeWise is a calm, scrollable revision app to make placement & internship prep feel lighter.",
+  keywords: ["ReeWise", "Placement Prep", "Internship Prep", "DSA Reels", "Calm Revision", "Active Recall"],
+  authors: [{ name: "ReeWise" }],
   openGraph: {
-    title: "ReeWise — Calm Revision for IIT Kharagpur",
-    description: "Stop restarting. Start revisiting. ReeWise is a calm, scrollable revision app built by a KGPian for KGPians to make placement & internship prep feel lighter.",
+    title: "ReeWise — Calm Revision",
+    description: "Stop restarting. Start revisiting. ReeWise is a calm, scrollable revision app to make placement & internship prep feel lighter.",
     type: "website",
   },
 };
