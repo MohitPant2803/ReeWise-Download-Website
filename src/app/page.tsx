@@ -277,15 +277,15 @@ export default function Home() {
 
               <div className="space-y-2.5">
                 <h3 className="text-base font-black tracking-tighter text-[#2D2727] leading-tight">
-                  Help the Next Batch
+                  What Would You Tell Your Younger Self?
                 </h3>
                 <p className="text-[10px] opacity-60 leading-normal">
-                  If you&apos;ve already gone through placements, internships, or interviews, a few lines of advice can go a long way. Share what worked, what didn&apos;t, and what juniors should know.
+                  A lesson, a mistake, a quote, or a reminder that helped you. Your words might be the first thing a fellow KGPian sees when they open ReeWise.
                 </p>
               </div>
 
               <div className="pt-2 text-xs font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
-                Share Advice &rarr;
+                Leave a Message &rarr;
               </div>
             </motion.a>
           </div>
