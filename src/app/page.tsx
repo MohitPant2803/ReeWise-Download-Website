@@ -220,35 +220,73 @@ export default function Home() {
 
 
         {/* SECTION 6 — COMMUNITY */}
-        <section id="community" className="py-12 px-6 space-y-4">
-          <div className="text-center space-y-1">
-            <h2 className="text-base font-extrabold tracking-tight">Help other students</h2>
-            <p className="text-xs opacity-60 leading-normal">Keep cards verified and up-to-date.</p>
+        <section id="community" className="py-16 px-6 space-y-8 border-t border-[#EADEC9]/20">
+          <div className="space-y-2 text-balance">
+            <h2 className="text-3xl font-black tracking-tighter leading-[1.08] text-[#2D2727]">
+              Built with KGP
+            </h2>
+            <p className="text-xs opacity-70 leading-relaxed text-[#2D2727]">
+              The goal isn&apos;t to fill ReeWise with everything. It&apos;s to fill it with what actually helps.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 pt-1">
+          <div className="grid grid-cols-2 gap-3.5">
             <motion.a
-              whileHover={{ y: -2 }}
+              whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white border border-[#EADEC9]/30 rounded-2xl flex flex-col justify-between min-h-[130px] shadow-2xs hover:shadow-xs transition-all text-left"
+              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[250px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
             >
-              <span className="text-xs font-bold leading-snug block">Suggest Material &rarr;</span>
-              <p className="text-[9.5px] opacity-50 leading-normal mt-2">Have a great summary or sheet? Send it here.</p>
+              {/* Illustration background */}
+              <div className="absolute right-[-15px] top-[-15px] opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300 pointer-events-none">
+                <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#8B5CF6]">
+                  <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                </svg>
+              </div>
+
+              <div className="space-y-2.5">
+                <h3 className="text-base font-black tracking-tighter text-[#2D2727] leading-tight">
+                  Request Something
+                </h3>
+                <p className="text-[10px] opacity-60 leading-normal">
+                  Missing a topic? Want a specific sheet, resource, or set of questions added? Tell me what would make ReeWise more useful.
+                </p>
+              </div>
+
+              <div className="pt-2 text-xs font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
+                Suggest Material &rarr;
+              </div>
             </motion.a>
 
             <motion.a
-              whileHover={{ y: -2 }}
+              whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white border border-[#EADEC9]/30 rounded-2xl flex flex-col justify-between min-h-[130px] shadow-2xs hover:shadow-xs transition-all text-left"
+              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[250px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
             >
-              <span className="text-xs font-bold leading-snug block">Submit Advice &rarr;</span>
-              <p className="text-[9.5px] opacity-50 leading-normal mt-2">Share tips and questions you were asked.</p>
+              {/* Illustration background */}
+              <div className="absolute right-[-15px] top-[-15px] opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300 pointer-events-none">
+                <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#8B5CF6]">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+
+              <div className="space-y-2.5">
+                <h3 className="text-base font-black tracking-tighter text-[#2D2727] leading-tight">
+                  Help the Next Batch
+                </h3>
+                <p className="text-[10px] opacity-60 leading-normal">
+                  If you&apos;ve already gone through placements, internships, or interviews, a few lines of advice can go a long way. Share what worked, what didn&apos;t, and what juniors should know.
+                </p>
+              </div>
+
+              <div className="pt-2 text-xs font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
+                Share Advice &rarr;
+              </div>
             </motion.a>
           </div>
         </section>
