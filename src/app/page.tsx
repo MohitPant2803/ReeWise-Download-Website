@@ -96,9 +96,8 @@ export default function Home() {
             className="w-18 h-18 rounded-[22px] object-cover shadow-lg border border-black/5"
           />
           <div className="space-y-2">
-            <span className="font-extrabold text-lg tracking-tight block">ReeWise</span>
             <h1 className="text-4xl xs:text-5xl font-black tracking-tighter leading-[1.06] text-balance">
-              Built for revisiting, not just studying.
+              ReeWise
             </h1>
             <p className="text-xs font-semibold opacity-70">
               A calm, scrollable revision app.
