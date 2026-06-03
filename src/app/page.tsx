@@ -217,29 +217,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 5 — WHY REEWISE EXISTS */}
-        <section className="py-12 px-6 space-y-5 relative">
-          <div className="space-y-1.5">
-            <h2 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
-              Why ReeWise Exists
-            </h2>
-          </div>
-          
-          <div className="space-y-3.5 text-xs leading-relaxed text-[#2D2727] opacity-90 text-balance">
-            <p>Revision shouldn&apos;t feel like a task.</p>
-            <p>It should feel like opening your phone.</p>
-            <p>A few questions.</p>
-            <p>A few concepts.</p>
-            <p>A quick memory check.</p>
-            <p>Five minutes while waiting for food.</p>
-            <p>Ten minutes before class.</p>
-            <p>A quick scroll before an interview.</p>
-            <p>That&apos;s the idea behind ReeWise.</p>
-            <p>Making revision convenient enough that you&apos;ll actually do it.</p>
-          </div>
 
-
-        </section>
 
         {/* SECTION 6 — COMMUNITY */}
         <section id="community" className="py-12 px-6 space-y-4">
