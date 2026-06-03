@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Shuffle,
   CheckCircle,
@@ -148,6 +148,39 @@ export default function Home() {
   const [paletteId, setPaletteId] = useState<keyof typeof PALETTES>("zen");
   const palette = PALETTES[paletteId];
 
+  // Auto-advancing screenshots carousel for Hero mockup
+  const carouselScreens = [
+    {
+      src: "/assets/Screenshot_2026-06-03-23-29-00-88_7bac7bd5d063bbad144b7a4a677790c4.jpg",
+      title: "Onboarding recall",
+      badge: "Onboarding"
+    },
+    {
+      src: "/assets/Screenshot_2026-06-03-23-30-24-08_7bac7bd5d063bbad144b7a4a677790c4.jpg",
+      title: "Offline Home Page",
+      badge: "Home Page"
+    },
+    {
+      src: "/assets/Screenshot_2026-06-03-23-28-40-99_7bac7bd5d063bbad144b7a4a677790c4.jpg",
+      title: "Daily Shuffled Feed",
+      badge: "Reel Screen"
+    },
+    {
+      src: "/assets/Screenshot_2026-06-03-23-29-43-11_7bac7bd5d063bbad144b7a4a677790c4.jpg",
+      title: "Revision Playlists",
+      badge: "My Space"
+    }
+  ];
+
+  const [screenIdx, setScreenIdx] = useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setScreenIdx((prev) => (prev + 1) % carouselScreens.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [carouselScreens.length]);
+
   return (
     <div className={`min-h-screen bg-calm-ivory font-sans antialiased selection:bg-brand-lavender/30 flex justify-center overflow-x-hidden`}>
       
@@ -220,20 +253,69 @@ export default function Home() {
           {/* HERO SECTION: Cozy Letter */}
           <section className="space-y-4 pt-1">
 
-            <h1 className="text-3xl font-bold tracking-tight leading-tight">
+            <h1 className="text-3xl font-bold tracking-tight leading-tight text-center">
               Built for <span className={`underline decoration-brand-lavender decoration-3 underline-offset-2`}>revisiting</span>, not just studying.
             </h1>
 
-            <p className="text-xs leading-relaxed font-semibold">
-              Hey KGPian,
-            </p>
+            {/* FLOATING PHONE MOCKUP WITH AUTO-ADVANCING CAROUSEL */}
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="w-full max-w-[220px] mx-auto py-4 relative z-10"
+            >
+              {/* Simulated Clean phone shell */}
+              <div className={`relative w-full aspect-[9/18.5] bg-[#0c1017] rounded-[28px] p-2 shadow-lg overflow-hidden flex items-center justify-center border border-calm-beige/15`}>
+                <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-14 h-3.5 bg-[#000] rounded-full z-20 flex items-center justify-center">
+                  <div className="w-1 h-1 rounded-full bg-[#111] absolute left-2" />
+                </div>
+                
+                <div className="w-full h-full rounded-[20px] overflow-hidden bg-white relative">
+                  {/* Screen Content */}
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={screenIdx}
+                      initial={{ opacity: 0, scale: 0.97 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.97 }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
+                      src={carouselScreens[screenIdx].src}
+                      alt={carouselScreens[screenIdx].title}
+                      className="w-full h-full object-cover absolute inset-0 select-none pointer-events-none"
+                    />
+                  </AnimatePresence>
+                  
+                  {/* Floating badge for active screen name */}
+                  <div className="absolute bottom-3.5 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-black/80 text-[8px] font-bold text-white rounded-full tracking-wider shadow-xs border border-white/10 z-10 backdrop-blur-xs whitespace-nowrap">
+                    {carouselScreens[screenIdx].badge}
+                  </div>
+                </div>
+              </div>
 
-            <p className="text-xs leading-relaxed opacity-90">
-              We already spend semesters sitting in libraries, attending classes, and writing code. We study hard. The real problem isn&apos;t learning—it&apos;s **recalling it all when it actually matters.**
-            </p>
+              {/* Page Indicator dots for carousel */}
+              <div className="flex justify-center gap-1.5 pt-3">
+                {carouselScreens.map((_, idx) => (
+                  <div
+                    key={idx}
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                      idx === screenIdx ? palette.dotColor : `${palette.borderBg} opacity-40`
+                    }`}
+                  />
+                ))}
+              </div>
+            </motion.div>
 
-            <p className="text-xs leading-relaxed opacity-90">
-              ReeWise is a calm, scrollable app built during placement preparation nights. It runs offline on your phone to make revision feel lighter, training your recall under uncertainty.
+            <h2 className="text-sm font-semibold text-center leading-snug px-2 text-balance">
+              A calm revision app built by a KGPian for KGPians.
+            </h2>
+
+            <p className={`text-xs ${palette.textSecondary} text-center leading-relaxed px-4 text-balance`}>
+              DSA, OS, CN, DBMS, playlists, active recall and instant GPT help—all in one scrollable place.
             </p>
 
             {/* CTA Buttons */}
@@ -245,7 +327,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={`w-full py-3 ${palette.buttonBg} text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm`}
               >
-                Download Android APK (Free)
+                Get APK
                 <ArrowRight className="w-3.5 h-3.5" />
               </motion.a>
               <motion.a
@@ -254,7 +336,7 @@ export default function Home() {
                 className={`w-full py-3 ${palette.accentBg} ${palette.accentText} text-xs font-semibold rounded-xl hover:opacity-85 transition-all flex items-center justify-center gap-1.5`}
               >
                 <Play className="w-3 h-3 fill-current text-current" />
-                Watch 2 Min Walkthrough
+                Watch Demo
               </motion.a>
             </div>
           </section>
