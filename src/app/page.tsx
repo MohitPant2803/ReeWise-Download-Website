@@ -436,6 +436,47 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
+          {/* WHY I BILT REEWISE */}
+          <section id="why-built" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Creator's Note
+            </span>
+            <h2 className="text-lg font-bold">Why I built ReeWise</h2>
+            
+            <div className={`p-4 ${palette.surface} rounded-xl border ${palette.border} space-y-3.5 shadow-xs`}>
+              <p className="text-xs leading-relaxed italic font-medium opacity-95">
+                &quot;Look, placement season at KGP is stressful enough. I didn&apos;t want to build another &apos;startup&apos;—I just wanted to survive the CDC tests.&quot;
+              </p>
+              
+              <div className={`space-y-3 text-[11px] ${palette.textSecondary} leading-relaxed`}>
+                <p>
+                  Honestly, <strong>I was tired of scattered resources</strong>. Every WhatsApp group, Telegram channel, and senior Drive folder had different notes. Searching for a single SQL normalization guide at 2 AM was absolute chaos.
+                </p>
+                <p>
+                  On top of that, <strong>I hated reopening PDFs</strong>. Having to scroll through a 150-page slide deck just to review a single Dijkstra complexity or check TCP header flags felt incredibly tedious when I was already exhausted.
+                </p>
+                <p>
+                  <strong>I wanted revision to take 10 minutes</strong>. I didn&apos;t want to set aside massive, stressful hours to study. I wanted something I could scroll through in the LBS mess hall line, or while waiting for my egg-maggi at Nescafe.
+                </p>
+                <p>
+                  Ultimately, <strong>I wanted something I would personally use before CDC</strong>. An offline tool that randomly tests my memory under pressure, mimicking how real interviewers swing between subjects.
+                </p>
+              </div>
+
+              <div className={`pt-3 border-t border-dashed ${palette.border} flex items-center gap-2.5`}>
+                <div className={`w-7 h-7 rounded-full ${palette.accentBg} flex items-center justify-center text-[10.5px] font-bold ${palette.accentText}`}>
+                  KG
+                </div>
+                <div>
+                  <span className="block text-[10.5px] font-bold">A KGPian Senior</span>
+                  <span className={`block text-[8.5px] ${palette.textMuted}`}>LBS Hall of Residence</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr className={palette.divider} />
+
           {/* APP SHOWCASE */}
           <section id="showcase" className="space-y-4">
             <div className="space-y-1">
