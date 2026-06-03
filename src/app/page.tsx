@@ -289,7 +289,7 @@ export default function Home() {
             <span className="font-bold text-xs">ReeWise</span>
           </div>
           <p className="text-[10px] opacity-60 leading-relaxed">
-            Built to make placement and internship prep feel lighter.
+            Made by a kgpian for kgpians.
           </p>
           <div className="text-[9px] opacity-40">
             &copy; {new Date().getFullYear()} ReeWise. Free & Open Source.
