@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Clock, SlidersHorizontal, ListMusic, MessageSquare, Bookmark } from "lucide-react";
 
 const SHOWCASE_ITEMS = [
   {
@@ -159,21 +159,62 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 3 — WHY DOES REVISION FEEL HEAVY? */}
-        <section className="py-12 px-6 space-y-4 relative">
-          <div className="space-y-1.5">
-            <h2 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
-              Revision is important, but it often feels too heavy to start.
-            </h2>
-          </div>
-          
-          <div className="space-y-4 text-xs leading-relaxed text-[#2D2727] opacity-90 text-balance">
-            <p>
-              The mental load of opening massive PDFs or starting a long study block keeps us from reviewing what we already know. ReeWise exists to reduce that friction.
-            </p>
-            <p>
-              By turning key concepts into a quick, scrollable feed, revision becomes something you can do in short, frictionless sessions — anywhere, anytime.
-            </p>
+        {/* SECTION 3 — FEATURES */}
+        <section className="py-12 px-6 space-y-6 relative">
+          <div className="space-y-4">
+            {[
+              {
+                icon: Clock,
+                title: "Revise in Minutes",
+                desc: "Quick revision sessions that fit into your day.",
+                color: "bg-[#8B5CF6]/10 text-[#8B5CF6]"
+              },
+              {
+                icon: SlidersHorizontal,
+                title: "Create Your Own Feed",
+                desc: "Choose your topics and get a stream of questions tailored to what you want to revise.",
+                color: "bg-emerald-500/10 text-emerald-600"
+              },
+              {
+                icon: ListMusic,
+                title: "Build Revision Playlists",
+                desc: "Save important questions and create your own pre-interview revision flow.",
+                color: "bg-blue-500/10 text-blue-600"
+              },
+              {
+                icon: MessageSquare,
+                title: "Ask Without Re-Explaining",
+                desc: "Get help directly from the question you're viewing, without copying or adding context again.",
+                color: "bg-amber-500/10 text-amber-600"
+              },
+              {
+                icon: Bookmark,
+                title: "Revisit What Matters",
+                desc: "Keep your best questions, concepts, and notes just a few taps away.",
+                color: "bg-rose-500/10 text-rose-600"
+              }
+            ].map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -2 }}
+                  className="bg-white border border-[#EADEC9]/30 rounded-2xl p-5 flex gap-4 items-start shadow-2xs hover:shadow-xs transition-all text-left"
+                >
+                  <div className={`p-2.5 rounded-xl shrink-0 ${feature.color}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-xs font-black tracking-tight text-[#2D2727]">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[10.5px] opacity-60 leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </section>
 
