@@ -169,24 +169,24 @@ export default function Home() {
           <div className="space-y-9">
             {[
               {
-                title: "Revise in Minutes",
-                desc: "Quick revision sessions that fit into your day."
+                title: "Revise in minutes",
+                desc: "Revision shouldn't feel like a heavy study block. Spend five minutes while waiting for food, or ten minutes before class. Fits right into your day."
               },
               {
-                title: "Create Your Own Feed",
-                desc: "Choose your topics and get a stream of questions tailored to what you want to revise."
+                title: "Choose your topics",
+                desc: "Pick what you want to study—whether it's DSA, OS, CN, or DBMS. Get a clean feed of questions made just for you."
               },
               {
-                title: "Build Revision Playlists",
-                desc: "Save important questions and create your own pre-interview revision flow."
+                title: "Save what you forget",
+                desc: "Pin the questions you always get wrong. Build a simple playlist for a quick scroll right before an interview."
               },
               {
-                title: "Ask Without Re-Explaining",
-                desc: "Get help directly from the question you're viewing, without copying or adding context again."
+                title: "Ask without explaining",
+                desc: "Get help directly from the question you are looking at. No need to copy code or explain the setup. Just tap and ask."
               },
               {
-                title: "Revisit What Matters",
-                desc: "Keep your best questions, concepts, and notes just a few taps away."
+                title: "A quick memory check",
+                desc: "Keep your best notes and concepts just a few taps away. Open it up, check your memory, and get back to your day."
               }
             ].map((feature, idx) => (
               <div key={idx} className="space-y-1.5 text-balance">
