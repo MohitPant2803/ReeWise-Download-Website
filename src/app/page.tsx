@@ -169,24 +169,24 @@ export default function Home() {
           <div className="space-y-9">
             {[
               {
-                title: "Revise in minutes",
-                desc: "Revision shouldn't feel like a heavy study block. Spend five minutes while waiting for food, or ten minutes before class. Fits right into your day."
+                title: "Revise Whenever You Feel Like It",
+                desc: "Sometimes you have 5 minutes. Sometimes 15. ReeWise is built for those small revision sessions that usually never happen."
               },
               {
-                title: "Choose your topics",
-                desc: "Pick what you want to study—whether it's DSA, OS, CN, or DBMS. Get a clean feed of questions made just for you."
+                title: "Choose What Shows Up",
+                desc: "Pick the subjects you want to revise and get a feed built around them."
               },
               {
-                title: "Save what you forget",
-                desc: "Pin the questions you always get wrong. Build a simple playlist for a quick scroll right before an interview."
+                title: "Keep the Questions Worth Revisiting",
+                desc: "Whenever you come across something good, save it and come back to it later."
               },
               {
-                title: "Ask without explaining",
-                desc: "Get help directly from the question you are looking at. No need to copy code or explain the setup. Just tap and ask."
+                title: "Get Unstuck Quickly",
+                desc: "If something doesn't make sense, you shouldn't have to leave your revision flow to figure it out."
               },
               {
-                title: "A quick memory check",
-                desc: "Keep your best notes and concepts just a few taps away. Open it up, check your memory, and get back to your day."
+                title: "Make Revision a Habit",
+                desc: "The easier revision becomes, the more likely you are to actually do it."
               }
             ].map((feature, idx) => (
               <div key={idx} className="space-y-1.5 text-balance">
