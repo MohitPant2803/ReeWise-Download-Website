@@ -280,7 +280,7 @@ export default function Home() {
                   What Would You Tell Your Younger Self?
                 </h3>
                 <p className="text-[10px] opacity-60 leading-normal">
-                  A lesson, a mistake, a quote, or a reminder that helped you. Your words might be the first thing a fellow KGPian sees when they open ReeWise.
+                  If you&apos;ve spent a few years at KGP, gone through CDC season, internships, placements, or just learned things the hard way, what would you tell your younger self?
                 </p>
               </div>
 
