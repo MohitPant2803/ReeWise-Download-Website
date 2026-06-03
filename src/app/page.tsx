@@ -622,7 +622,7 @@ export default function Home() {
             <span className="font-bold text-xs">ReeWise</span>
           </div>
           <p className={`text-[10px] ${palette.textSecondary} leading-relaxed`}>
-            Written by a student during hostel nights at LBS Hall of Residence.
+            Made by a KGPian during hostel nights at LBS Hall of Residence.
           </p>
           <div className={`text-[9px] ${palette.textMuted}`}>
             &copy; {new Date().getFullYear()} ReeWise. Free & Open Source.
