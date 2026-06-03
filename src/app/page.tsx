@@ -142,7 +142,6 @@ const PALETTES = {
 };
 
 export default function Home() {
-  const [isPlayingDemo, setIsPlayingDemo] = useState(false);
 
   // App vibe palette state
   const [paletteId, setPaletteId] = useState<keyof typeof PALETTES>("zen");
@@ -345,69 +344,24 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
-          {/* THE REAL PROBLEM */}
-          <section id="problem" className="space-y-4">
+          {/* VIDEO DEMO SECTION */}
+          <section id="demo" className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              The Placement Mess
+              1-Min Walkthrough
             </span>
-            <h2 className="text-lg font-bold">Why does revision feel so heavy?</h2>
+            <h2 className="text-lg font-bold">See ReeWise in 1 minute</h2>
             
-            <p className="text-xs opacity-90 leading-relaxed">
-              When CDC tests or placement slots approach, you aren&apos;t short of materials. You are buried in them:
-            </p>
-
-            <div className="space-y-3 pt-1">
-              {/* Point 1 */}
-              <motion.div 
-                whileHover={{ y: -2 }}
-                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
-              >
-                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
-                  01
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold">The Telegram PDF Graveyard</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Buried inside a chat with 5,000 messages is a link to a &quot;DBMS normalization sheet.&quot; Trying to find it at 2 AM is a mental headache.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Point 2 */}
-              <motion.div 
-                whileHover={{ y: -2 }}
-                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
-              >
-                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
-                  02
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold">The 80 Open Browser Tabs</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Keeping 40 LeetCode tabs and 20 articles open because &quot;I need to review this tree pattern before slot 1.&quot; It crashes your browser and your peace of mind.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Point 3 */}
-              <motion.div 
-                whileHover={{ y: -2 }}
-                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
-              >
-                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
-                  03
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold">Locked &quot;Request Access&quot; Folders</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Clicking a legendary senior drive folder link only to see &quot;Request Access&quot; when your test starts in two hours.
-                  </p>
-                </div>
-              </motion.div>
+            <div className={`w-full aspect-video rounded-2xl ${palette.surface} border ${palette.border} overflow-hidden shadow-xs relative transition-all duration-300`}>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="ReeWise Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </section>
-
-          <hr className={palette.divider} />
 
           {/* THE PHILOSOPHY */}
           <section id="philosophy" className="space-y-4">
@@ -523,6 +477,70 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
+          {/* THE REAL PROBLEM */}
+          <section id="problem" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              The Placement Mess
+            </span>
+            <h2 className="text-lg font-bold">Why does revision feel so heavy?</h2>
+            
+            <p className="text-xs opacity-90 leading-relaxed">
+              When CDC tests or placement slots approach, you aren&apos;t short of materials. You are buried in them:
+            </p>
+
+            <div className="space-y-3 pt-1">
+              {/* Point 1 */}
+              <motion.div 
+                whileHover={{ y: -2 }}
+                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
+              >
+                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
+                  01
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold">The Telegram PDF Graveyard</h4>
+                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
+                    Buried inside a chat with 5,000 messages is a link to a &quot;DBMS normalization sheet.&quot; Trying to find it at 2 AM is a mental headache.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Point 2 */}
+              <motion.div 
+                whileHover={{ y: -2 }}
+                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
+              >
+                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
+                  02
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold">The 80 Open Browser Tabs</h4>
+                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
+                    Keeping 40 LeetCode tabs and 20 articles open because &quot;I need to review this tree pattern before slot 1.&quot; It crashes your browser and your peace of mind.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Point 3 */}
+              <motion.div 
+                whileHover={{ y: -2 }}
+                className={`p-3 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
+              >
+                <div className={`w-6 h-6 rounded ${palette.accentBg} ${palette.accentText} flex items-center justify-center shrink-0 text-xs font-bold`}>
+                  03
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold">Locked &quot;Request Access&quot; Folders</h4>
+                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
+                    Clicking a legendary senior drive folder link only to see &quot;Request Access&quot; when your test starts in two hours.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          <hr className={palette.divider} />
+
           {/* SPECIFIC FEATURES */}
           <section className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
@@ -623,47 +641,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* YOUTUBE VIDEO SECTION */}
-          <section id="demo" className="space-y-4">
-            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              Walkthrough Video
-            </span>
-            <h2 className="text-lg font-bold">Watch us use the app</h2>
-            <p className="text-xs opacity-90 leading-relaxed">
-              Here is a quick 2-minute walkthrough showing how to use lists, flip cards, and ask context-aware queries.
-            </p>
-
-            <div className={`w-full aspect-video rounded-xl ${palette.surface} border ${palette.border} overflow-hidden relative group flex items-center justify-center shadow-xs transition-all duration-300`}>
-              {!isPlayingDemo ? (
-                <>
-                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-lavender/10 to-accent-amber/10 opacity-70 pointer-events-none" />
-                  <div
-                    className="absolute inset-0 flex flex-col items-center justify-center gap-2 cursor-pointer p-4"
-                    onClick={() => setIsPlayingDemo(true)}
-                  >
-                    <motion.div 
-                      whileHover={{ scale: 1.1 }}
-                      className={`w-12 h-12 rounded-full ${palette.buttonBg} flex items-center justify-center transition-all shadow-xs`}
-                    >
-                      <Play className="w-4 h-4 fill-current translate-x-[1px]" />
-                    </motion.div>
-                    <span className="font-semibold text-xs opacity-80">Play Demonstration (2 mins)</span>
-                  </div>
-                </>
-              ) : (
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                  title="ReeWise Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              )}
-            </div>
-          </section>
-
-          <hr className={palette.divider} />
 
           {/* COMMUNITY CONTRIBUTIONS */}
           <section id="community" className="space-y-4">
