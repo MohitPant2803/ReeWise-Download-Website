@@ -215,62 +215,7 @@ export default function Home() {
         {/* Main Content Area */}
         <div className="flex-1 px-5 py-6 space-y-12">
           
-          {/* THEME SELECTOR: Tap to switch app presets and match vibe */}
-          <section className={`p-4 ${palette.surface} rounded-2xl border ${palette.border} space-y-3 shadow-xs transition-all duration-300`}>
-            <div className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-text-calm-charcoal/40">
-              <Palette className="w-3.5 h-3.5" />
-              <span>Preview App Theme Preset</span>
-            </div>
-            
-            <div className="flex justify-between items-center gap-2">
-              <span className="text-[10px] font-medium leading-none">
-                Vibe: <span className="font-bold">{palette.name}</span>
-              </span>
-              
-              <div className="flex gap-1.5">
-                {/* Zen Button */}
-                <button
-                  onClick={() => setPaletteId("zen")}
-                  className={`w-5 h-5 rounded-full bg-[#FAF6F0] border-2 ${
-                    paletteId === "zen" ? "border-text-calm-charcoal" : "border-[#EADEC9]"
-                  } shadow-xs`}
-                  title="Zen Garden"
-                />
-                {/* Matcha Button */}
-                <button
-                  onClick={() => setPaletteId("matcha")}
-                  className={`w-5 h-5 rounded-full bg-[#F1F5E9] border-2 ${
-                    paletteId === "matcha" ? "border-text-calm-charcoal" : "border-[#DFE8D9]"
-                  } shadow-xs`}
-                  title="Matcha Calm"
-                />
-                {/* Sunset Button */}
-                <button
-                  onClick={() => setPaletteId("sunset")}
-                  className={`w-5 h-5 rounded-full bg-[#FFF3EE] border-2 ${
-                    paletteId === "sunset" ? "border-text-calm-charcoal" : "border-[#F6E1D7]"
-                  } shadow-xs`}
-                  title="Crimson Sunset"
-                />
-                {/* Midnight Button */}
-                <button
-                  onClick={() => setPaletteId("midnight")}
-                  className={`w-5 h-5 rounded-full bg-[#030509] border-2 ${
-                    paletteId === "midnight" ? "border-white" : "border-[#263352]"
-                  } shadow-xs`}
-                  title="Midnight Focus"
-                />
-                {/* Classic Button */}
-                <button
-                  onClick={() => setPaletteId("default")}
-                  className={`w-5 h-5 rounded-full bg-[#F8FAFC] border-2 ${
-                    paletteId === "default" ? "border-text-calm-charcoal" : "border-[#E2E8F0]"
-                  } shadow-xs`}
-                  title="Classic Modern"
-                />
-              </div>
-            </div>
-          </section>
+
 
           {/* HERO SECTION: Cozy Letter */}
           <section className="space-y-4 pt-1">
@@ -487,6 +432,73 @@ export default function Home() {
           </section>
 
           <hr className={palette.divider} />
+
+          {/* MAKE IT YOURS: Theme Preset Selector */}
+          <section className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Make it yours
+            </span>
+            <h2 className="text-lg font-bold">Choose your revision vibe</h2>
+            <p className="text-xs opacity-90 leading-relaxed">
+              Revision shouldn&apos;t feel stressful. Toggle between Zen, Matcha, Sunset, or Midnight themes to match your study mood:
+            </p>
+
+            <div className={`p-4 ${palette.surface} rounded-2xl border ${palette.border} space-y-3 shadow-xs transition-all duration-300`}>
+              <div className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-text-calm-charcoal/40">
+                <Palette className="w-3.5 h-3.5" />
+                <span>Preview App Theme Preset</span>
+              </div>
+              
+              <div className="flex justify-between items-center gap-2">
+                <span className="text-[10px] font-medium leading-none">
+                  Vibe: <span className="font-bold">{palette.name}</span>
+                </span>
+                
+                <div className="flex gap-1.5">
+                  {/* Zen Button */}
+                  <button
+                    onClick={() => setPaletteId("zen")}
+                    className={`w-5 h-5 rounded-full bg-[#FAF6F0] border-2 ${
+                      paletteId === "zen" ? "border-text-calm-charcoal" : "border-[#EADEC9]"
+                    } shadow-xs`}
+                    title="Zen Garden"
+                  />
+                  {/* Matcha Button */}
+                  <button
+                    onClick={() => setPaletteId("matcha")}
+                    className={`w-5 h-5 rounded-full bg-[#F1F5E9] border-2 ${
+                      paletteId === "matcha" ? "border-text-calm-charcoal" : "border-[#DFE8D9]"
+                    } shadow-xs`}
+                    title="Matcha Calm"
+                  />
+                  {/* Sunset Button */}
+                  <button
+                    onClick={() => setPaletteId("sunset")}
+                    className={`w-5 h-5 rounded-full bg-[#FFF3EE] border-2 ${
+                      paletteId === "sunset" ? "border-text-calm-charcoal" : "border-[#F6E1D7]"
+                    } shadow-xs`}
+                    title="Crimson Sunset"
+                  />
+                  {/* Midnight Button */}
+                  <button
+                    onClick={() => setPaletteId("midnight")}
+                    className={`w-5 h-5 rounded-full bg-[#030509] border-2 ${
+                      paletteId === "midnight" ? "border-white" : "border-[#263352]"
+                    } shadow-xs`}
+                    title="Midnight Focus"
+                  />
+                  {/* Classic Button */}
+                  <button
+                    onClick={() => setPaletteId("default")}
+                    className={`w-5 h-5 rounded-full bg-[#F8FAFC] border-2 ${
+                      paletteId === "default" ? "border-text-calm-charcoal" : "border-[#E2E8F0]"
+                    } shadow-xs`}
+                    title="Classic Modern"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* YOUTUBE VIDEO SECTION */}
           <section id="demo" className="space-y-4">
