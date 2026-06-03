@@ -161,37 +161,44 @@ export default function Home() {
 
         {/* SECTION 3 — ELEGANT FEATURES FLOW */}
         <section className="py-14 px-6 space-y-9 relative border-t border-[#EADEC9]/20">
-          {[
-            {
-              title: "Revise in Minutes",
-              desc: "Quick revision sessions that fit into your day."
-            },
-            {
-              title: "Create Your Own Feed",
-              desc: "Choose your topics and get a stream of questions tailored to what you want to revise."
-            },
-            {
-              title: "Build Revision Playlists",
-              desc: "Save important questions and create your own pre-interview revision flow."
-            },
-            {
-              title: "Ask Without Re-Explaining",
-              desc: "Get help directly from the question you're viewing, without copying or adding context again."
-            },
-            {
-              title: "Revisit What Matters",
-              desc: "Keep your best questions, concepts, and notes just a few taps away."
-            }
-          ].map((feature, idx) => (
-            <div key={idx} className="space-y-1.5 text-balance">
-              <h3 className="text-base font-extrabold tracking-tight text-[#2D2727]">
-                {feature.title}
-              </h3>
-              <p className="text-xs opacity-70 leading-relaxed text-[#2D2727]">
-                {feature.desc}
-              </p>
-            </div>
-          ))}
+          <div className="space-y-1.5 pb-2">
+            <h2 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
+              Built for Convenience
+            </h2>
+          </div>
+          <div className="space-y-9">
+            {[
+              {
+                title: "Revise in Minutes",
+                desc: "Quick revision sessions that fit into your day."
+              },
+              {
+                title: "Create Your Own Feed",
+                desc: "Choose your topics and get a stream of questions tailored to what you want to revise."
+              },
+              {
+                title: "Build Revision Playlists",
+                desc: "Save important questions and create your own pre-interview revision flow."
+              },
+              {
+                title: "Ask Without Re-Explaining",
+                desc: "Get help directly from the question you're viewing, without copying or adding context again."
+              },
+              {
+                title: "Revisit What Matters",
+                desc: "Keep your best questions, concepts, and notes just a few taps away."
+              }
+            ].map((feature, idx) => (
+              <div key={idx} className="space-y-1.5 text-balance">
+                <h3 className="text-base font-extrabold tracking-tight text-[#2D2727]">
+                  {feature.title}
+                </h3>
+                <p className="text-xs opacity-70 leading-relaxed text-[#2D2727]">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* SECTION 4 — VIDEO DEMO */}
