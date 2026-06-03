@@ -338,9 +338,7 @@ export default function Home() {
                 Watch Demo
               </motion.a>
             </div>
-          </section>
-
-          <hr className={palette.divider} />
+          </section>          <hr className={palette.divider} />
 
           {/* VIDEO DEMO SECTION */}
           <section id="demo" className="space-y-4">
@@ -366,21 +364,21 @@ export default function Home() {
           {/* A 10-MINUTE REVISION RITUAL */}
           <section id="ritual" className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              The Concept
+              The Ritual
             </span>
             <h2 className="text-lg font-bold">A 10 minute revision ritual</h2>
             <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
-              No complicated workflow. No heavy, exhausting hours of study. Just a simple, calm habit:
+              No heavy study blocks. No files searching. Just a calm habit:
             </p>
             <div className={`p-4 ${palette.surface} rounded-xl border ${palette.border} space-y-3.5 shadow-xs`}>
               <ol className="space-y-3 text-xs leading-normal">
                 <li className="flex gap-2.5 items-start">
                   <span className={`w-5 h-5 rounded-full ${palette.accentBg} ${palette.accentText} font-bold flex items-center justify-center shrink-0 text-[10px]`}>1</span>
-                  <span><strong>Open ReeWise</strong> on your phone while walking to LBS mess or waiting for food.</span>
+                  <span><strong>Open ReeWise</strong> on your phone while walking to LBS mess or waiting for tea.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <span className={`w-5 h-5 rounded-full ${palette.accentBg} ${palette.accentText} font-bold flex items-center justify-center shrink-0 text-[10px]`}>2</span>
-                  <span><strong>Scroll a few random cards</strong> to condition your memory under uncertainty.</span>
+                  <span><strong>Scroll random cards</strong> to condition your recall under uncertainty.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <span className={`w-5 h-5 rounded-full ${palette.accentBg} ${palette.accentText} font-bold flex items-center justify-center shrink-0 text-[10px]`}>3</span>
@@ -388,11 +386,11 @@ export default function Home() {
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <span className={`w-5 h-5 rounded-full ${palette.accentBg} ${palette.accentText} font-bold flex items-center justify-center shrink-0 text-[10px]`}>4</span>
-                  <span><strong>Ask GPT if you get stuck</strong> to get direct, contextual help in one tap.</span>
+                  <span><strong>Tap once to ask GPT</strong> if you get stuck, without copying code.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <span className={`w-5 h-5 rounded-full ${palette.accentBg} ${palette.accentText} font-bold flex items-center justify-center shrink-0 text-[10px]`}>5</span>
-                  <span><strong>Revisit your playlist</strong> minutes before walking into your slot tests.</span>
+                  <span><strong>Revisit your checklist</strong> minutes before walking into your slot tests.</span>
                 </li>
               </ol>
             </div>
@@ -400,64 +398,18 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
-          {/* APP SHOWCASE (App Store Style, Large) */}
-          <section id="showcase" className="space-y-4">
-            <div className="space-y-1">
-              <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-                Visual Proof
-              </span>
-              <h2 className="text-lg font-bold pt-2">How ReeWise works</h2>
-              <p className={`text-xs ${palette.textSecondary} leading-normal`}>
-                Swipe left or right to see all screens:
-              </p>
-            </div>
-
-            {/* App Store Style Showcase */}
-            <div className="w-full overflow-x-auto no-scrollbar flex gap-4 pb-4 snap-x snap-mandatory">
-              {SCREENSHOTS.map((screen, idx) => (
-                <div key={idx} className="snap-center shrink-0 w-full px-1 space-y-4">
-                  {/* Large simulated phone shell */}
-                  <motion.div 
-                    whileHover={{ scale: 1.005 }}
-                    className={`relative w-full aspect-[9/18.5] bg-[#0c1017] rounded-[36px] p-3.5 shadow-md overflow-hidden flex items-center justify-center border border-calm-beige/10`}
-                  >
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-[#000] rounded-full z-20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-[#111] absolute left-2.5" />
-                    </div>
-                    
-                    <div className="w-full h-full rounded-[24px] overflow-hidden bg-white relative">
-                      <img
-                        src={screen.src}
-                        alt={screen.title}
-                        className="w-full h-full object-cover select-none pointer-events-none"
-                      />
-                    </div>
-                  </motion.div>
-
-                  <div className="text-center px-4 space-y-1">
-                    <h3 className={`text-sm font-bold ${palette.accentText}`}>{screen.title}</h3>
-                    <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>{screen.caption}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <hr className={palette.divider} />
-
-          {/* THE REAL PROBLEM */}
+          {/* SECTION: THE PROBLEM */}
           <section id="problem" className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              The Placement Mess
+              The Reality
             </span>
-            <h2 className="text-lg font-bold">Why does revision feel so heavy?</h2>
+            <h2 className="text-lg font-bold">You already have the notes.</h2>
             
             <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
-              When CDC tests or placement slots approach, you aren&apos;t short of materials. You are buried in them:
+              The problem isn&apos;t finding resources anymore. You already have a hundred PDFs, folders, and shared LeetCode bookmarks. The problem is remembering where everything is when you&apos;re exhausted at 2 AM. Revision shouldn&apos;t feel like a treasure hunt.
             </p>
 
             <div className="space-y-3 pt-1">
-              {/* Point 1 */}
               <motion.div 
                 whileHover={{ y: -2 }}
                 className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
@@ -468,12 +420,11 @@ export default function Home() {
                 <div>
                   <h4 className="text-xs font-bold">The PDF you swear you&apos;ll revise tomorrow</h4>
                   <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Sitting in your local Downloads folder or marked star in WhatsApp, building up silent academic anxiety instead of actual memory.
+                    Sitting in your browser bookmarks or WhatsApp starred messages, building up guilt instead of memory.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Point 2 */}
               <motion.div 
                 whileHover={{ y: -2 }}
                 className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
@@ -484,12 +435,11 @@ export default function Home() {
                 <div>
                   <h4 className="text-xs font-bold">That one legendary Drive link everyone forwards</h4>
                   <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Trying to request permission or sorting through 80 different unorganized folders at 2 AM is a massive mental load.
+                    Requesting permission or sorting through 80 different unorganized folders at 2 AM is a massive mental load.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Point 3 */}
               <motion.div 
                 whileHover={{ y: -2 }}
                 className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
@@ -498,14 +448,13 @@ export default function Home() {
                   03
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold">The OS notes sitting in Downloads since 2nd year</h4>
+                  <h4 className="text-xs font-bold">The OS notes in Downloads since 2nd year</h4>
                   <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    You spent weeks compiling them, but they are buried somewhere in a messy local disk, practically inaccessible when tests start.
+                    Buried inside your hard drive alongside hundreds of random files, completely lost when tests actually start.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Point 4 */}
               <motion.div 
                 whileHover={{ y: -2 }}
                 className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}
@@ -516,7 +465,7 @@ export default function Home() {
                 <div>
                   <h4 className="text-xs font-bold">The playlist you&apos;ll open the night before slot one</h4>
                   <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Frantically trying to read thousands of lines of code inside slides will fail under panic. Revision needs a system.
+                    Frantically trying to read thousands of lines of slides will fail under panic. Revision needs a system.
                   </p>
                 </div>
               </motion.div>
@@ -525,10 +474,69 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
-          {/* REEWISE IS / IS NOT */}
+          {/* SECTION: THE REVEAL */}
+          <section id="reveal" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Introduce ReeWise
+            </span>
+            <h2 className="text-lg font-bold">What if revision felt as easy as scrolling?</h2>
+            
+            <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
+              ReeWise shuffles your best notes, DSA patterns, and core concepts into a calm, scrollable feed on your phone. You don&apos;t need another heavy study block. Just open the app, scroll for 10 minutes, and test your memory randomly. Works completely offline—even in the network-dead corridors of LBS.
+            </p>
+          </section>
+
+          <hr className={palette.divider} />
+
+          {/* SECTION: RANDOMNESS */}
+          <section id="randomness" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Unpredictable Recall
+            </span>
+            <h2 className="text-lg font-bold">Because interviews aren&apos;t chapter-wise.</h2>
+            
+            <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
+              When you revise a sheet chapter-by-chapter, your brain cheats. You know that the next problem uses a Binary Search Tree because the chapter title says so.
+            </p>
+            <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
+              But in an interview, the interviewer swings from a Dijkstra complexity directly to TCP headers, and then to a B+ tree query. ReeWise shuffles topics unpredictably, so your brain learns to switch context instantly under pressure.
+            </p>
+          </section>
+
+          <hr className={palette.divider} />
+
+          {/* SECTION: PLAYLISTS */}
+          <section id="playlists" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Personal Checklists
+            </span>
+            <h2 className="text-lg font-bold">Build your own pre-CDC ritual.</h2>
+            
+            <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
+              That list of questions you always revisit before interviews? Give it a home. Pin the trickiest concepts, compile your personal &quot;morning check&quot; playlist, and run through them in order right before walking into slot one. No more frantic searching through old bookmarks.
+            </p>
+          </section>
+
+          <hr className={palette.divider} />
+
+          {/* SECTION: GPT */}
+          <section id="gpt" className="space-y-4">
+            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
+              Contextual Help
+            </span>
+            <h2 className="text-lg font-bold">No more re-explaining yourself.</h2>
+            
+            <p className={`text-xs ${palette.textSecondary} leading-relaxed`}>
+              Ever copied an entire question into ChatGPT just to ask one doubt? With ReeWise, just tap once when you&apos;re stuck on a card. The helper knows exactly what code or concept you are looking at. No copying. No pasting. No explaining context again.
+            </p>
+          </section>
+
+          <hr className={palette.divider} />
+
+          {/* SECTION: REEWISE IS / IS NOT */}
           <section className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              The Vibe Check
+              Vibe Check
             </span>
             
             <div className={`p-4.5 ${palette.surface} rounded-xl border ${palette.border} space-y-4 shadow-xs`}>
@@ -576,127 +584,36 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
-          {/* THE PHILOSOPHY */}
-          <section id="philosophy" className="space-y-4">
-            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              The Philosophy
-            </span>
-            <h2 className="text-lg font-bold">&quot;Because interviews aren&apos;t chapter-wise.&quot;</h2>
-            
-            <p className="text-xs opacity-90 leading-relaxed">
-              When you revise a sheet chapter-by-chapter, your mind cheats. You know that the next problem uses a Binary Search Tree because the chapter title says so.
-            </p>
-            
-            <p className="text-xs opacity-90 leading-relaxed">
-              But in an interview, the interviewer swings from a Dijkstra complexity directly to TCP headers, and then to a B+ tree query. 
-            </p>
-
-            <div className={`p-3 ${palette.accentBg} border ${palette.border} rounded-xl space-y-1.5`}>
-              <span className={`text-[10px] font-bold ${palette.accentText} block flex items-center gap-1.5`}>
-                <Shuffle className="w-3.5 h-3.5" /> Random Reels Feed
-              </span>
-              <p className="text-[10.5px] opacity-90 leading-relaxed">
-                By shuffling DSA, OS, CN, and System Design cards in an unpredictable, scrollable feed, ReeWise builds recall under uncertainty—exactly like placement season.
-              </p>
-            </div>
-          </section>
-
-          <hr className={palette.divider} />
-
-          {/* WHY I BUILT REEWISE (Creator's Note) */}
+          {/* SECTION: CREATOR STORY (Why I built ReeWise) */}
           <section id="why-built" className="space-y-4">
             <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              Why I Built This
+              Vulnerable & Authentic
             </span>
             <h2 className="text-lg font-bold">Why I built ReeWise</h2>
             
             <div className={`p-4.5 ${palette.surface} rounded-xl border ${palette.border} space-y-4 shadow-xs`}>
               <div className={`space-y-3.5 text-xs ${palette.textSecondary} leading-relaxed`}>
                 <p>
-                  During placement prep I realized I wasn&apos;t short on resources.
-                </p>
-                <p className="font-semibold text-center italic text-balance text-[#000]/90 dark:text-white my-1 text-sm">
-                  I was drowning in them.
+                  I wasn&apos;t short on resources. I had too many.
                 </p>
                 <p>
-                  Telegram PDFs. Drive folders. Saved links. Screenshots.
-                </p>
-                <p className="font-bold">
-                  The problem wasn&apos;t studying. It was revisiting.
+                  Every senior had a Drive folder. Every WhatsApp group had PDFs. Every topic had ten different versions of notes floating around LBS.
                 </p>
                 <p>
-                  So I built the thing I wished existed.
+                  When placement season came around, revision felt harder than studying. I was spending more time digging through files than reinforcing my memory.
+                </p>
+                <p>
+                  So I built something I wished existed. A clean, offline way to test my active recall during LBS corridor walks or while waiting for tea. No startup pitches, no user-acquisition goals. Just a KGPian sharing something useful with friends.
                 </p>
               </div>
 
               <div className={`pt-3.5 border-t border-dashed ${palette.border} flex items-center gap-2.5`}>
-                {/* Simulated Creator Avatar */}
                 <div className={`w-8 h-8 rounded-full ${palette.accentBg} flex items-center justify-center font-bold ${palette.accentText} text-xs shadow-xs`}>
                   KG
                 </div>
                 <div>
                   <span className="block text-[10.5px] font-bold">KGPian Creator</span>
                   <span className={`block text-[8px] ${palette.textSecondary}`}>Hostel Room, LBS Hall of Residence</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <hr className={palette.divider} />
-
-          {/* APP FEATURES (No Jargon) */}
-          <section className="space-y-4">
-            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              How it works
-            </span>
-            <h2 className="text-lg font-bold">Built for quick memory checks</h2>
-
-            <div className="space-y-3.5 text-xs">
-              {/* Feature 1 */}
-              <div className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}>
-                <CheckCircle className={`w-4 h-4 ${palette.accentText} shrink-0 mt-0.5`} />
-                <div>
-                  <h4 className="font-bold text-xs">Keep your best questions</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Collect the core DSA algorithms or tricky database normalizations in one clean feed, instead of scattered link dumps.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}>
-                <CheckCircle className={`w-4 h-4 ${palette.accentText} shrink-0 mt-0.5`} />
-                <div>
-                  <h4 className="font-bold text-xs">Ask when you&apos;re stuck</h4>
-                  <div className={`text-[10.5px] ${palette.textSecondary} leading-relaxed mt-1.5 space-y-1`}>
-                    <p className="font-semibold text-[#000]/80 dark:text-white">Stuck on a question?</p>
-                    <p className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-current" /> Tap once.</p>
-                    <p className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-current" /> No copying.</p>
-                    <p className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-current" /> No pasting.</p>
-                    <p className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-current" /> No explaining context again.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}>
-                <CheckCircle className={`w-4 h-4 ${palette.accentText} shrink-0 mt-0.5`} />
-                <div>
-                  <h4 className="font-bold text-xs">Build your own playlist</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Pin the exact questions you always trick yourself on, and scroll them back-to-back before walking in.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feature 4 */}
-              <div className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-start gap-3 shadow-xs`}>
-                <CheckCircle className={`w-4 h-4 ${palette.accentText} shrink-0 mt-0.5`} />
-                <div>
-                  <h4 className="font-bold text-xs">Revise anywhere</h4>
-                  <p className={`text-[10px] ${palette.textSecondary} leading-normal mt-0.5`}>
-                    Revision works 100% offline. Read through cards in network-dead hostels, library queues, or mess hall tables.
-                  </p>
                 </div>
               </div>
             </div>
@@ -729,7 +646,7 @@ export default function Home() {
 
           <hr className={palette.divider} />
 
-          {/* MAKE IT YOURS: Theme Preset Selector (Tiny Card) */}
+          {/* MAKE IT YOURS */}
           <section className={`p-3.5 ${palette.surface} rounded-xl border ${palette.border} flex items-center justify-between gap-3 shadow-xs transition-all duration-300`}>
             <div className="space-y-0.5">
               <h4 className="text-xs font-bold flex items-center gap-1.5">
@@ -739,7 +656,6 @@ export default function Home() {
             </div>
             
             <div className="flex gap-1.5 shrink-0">
-              {/* Zen Button */}
               <button
                 onClick={() => setPaletteId("zen")}
                 className={`w-5 h-5 rounded-full bg-[#FAF6F0] border-2 ${
@@ -747,7 +663,6 @@ export default function Home() {
                 } shadow-xs`}
                 title="Zen Garden"
               />
-              {/* Matcha Button */}
               <button
                 onClick={() => setPaletteId("matcha")}
                 className={`w-5 h-5 rounded-full bg-[#F1F5E9] border-2 ${
@@ -755,7 +670,6 @@ export default function Home() {
                 } shadow-xs`}
                 title="Matcha Calm"
               />
-              {/* Sunset Button */}
               <button
                 onClick={() => setPaletteId("sunset")}
                 className={`w-5 h-5 rounded-full bg-[#FFF3EE] border-2 ${
@@ -763,7 +677,6 @@ export default function Home() {
                 } shadow-xs`}
                 title="Crimson Sunset"
               />
-              {/* Midnight Button */}
               <button
                 onClick={() => setPaletteId("midnight")}
                 className={`w-5 h-5 rounded-full bg-[#030509] border-2 ${
@@ -771,61 +684,12 @@ export default function Home() {
                 } shadow-xs`}
                 title="Midnight Focus"
               />
-              {/* Classic Button */}
               <button
                 onClick={() => setPaletteId("default")}
                 className={`w-5 h-5 rounded-full bg-[#F8FAFC] border-2 ${
                   paletteId === "default" ? "border-text-calm-charcoal" : "border-[#E2E8F0]"
                 } shadow-xs`}
-                title="Classic Slate"
               />
-            </div>
-          </section>
-
-          <hr className={palette.divider} />
-
-          {/* COMMUNITY CONTRIBUTIONS */}
-          <section id="community" className="space-y-4">
-            <span className={`text-[9px] uppercase tracking-wider font-bold ${palette.badgeBg} px-2.5 py-1 rounded`}>
-              Senior Advice
-            </span>
-            <h2 className="text-lg font-bold">Contribute notes</h2>
-            <p className="text-xs opacity-90 leading-relaxed">
-              Help keep cards verified and up-to-date with questions senior placement candidates recommend:
-            </p>
-
-            <div className="grid grid-cols-1 gap-3.5 pt-1">
-              <motion.a
-                whileHover={{ y: -2 }}
-                href="https://google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-4 ${palette.surface} rounded-xl border ${palette.border} hover:opacity-85 transition-all flex flex-col gap-1.5 shadow-xs`}
-              >
-                <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold">Submit Materials & Sheets</span>
-                  <ExternalLink className={`w-3.5 h-3.5 ${palette.textMuted}`} />
-                </div>
-                <p className={`text-[10px] ${palette.textSecondary} leading-normal`}>
-                  Have a great summary, cheatsheet, or short notes? Upload here so we can format it into cards.
-                </p>
-              </motion.a>
-
-              <motion.a
-                whileHover={{ y: -2 }}
-                href="https://google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-4 ${palette.surface} rounded-xl border ${palette.border} hover:opacity-85 transition-all flex flex-col gap-1.5 shadow-xs`}
-              >
-                <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold">Submit Interview Tips</span>
-                  <ExternalLink className={`w-3.5 h-3.5 ${palette.textMuted}`} />
-                </div>
-                <p className={`text-[10px] ${palette.textSecondary} leading-normal`}>
-                  Finished placements or CDC? Submit key questions you were asked, along with tips for juniors.
-                </p>
-              </motion.a>
             </div>
           </section>
 
@@ -836,7 +700,7 @@ export default function Home() {
             <div className="absolute top-[-50px] left-[-50px] w-40 h-40 bg-brand-lavender/25 rounded-full blur-[40px] pointer-events-none" />
             
             <h2 className="text-[15px] font-bold tracking-tight leading-snug text-balance">
-              If ReeWise helps one KGPian feel more prepared before CDC, it&apos;s already a success.
+              If ReeWise helps even one KGPian walk into a CDC interview feeling a little more prepared, it has done its job.
             </h2>
             
             <p className="text-[11.5px] text-[#FAF8F5]/85 font-medium -mt-2">
