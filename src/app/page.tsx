@@ -222,7 +222,7 @@ export default function Home() {
         <section id="community" className="py-16 px-6 space-y-8 border-t border-[#EADEC9]/20">
           <div className="space-y-2 text-balance">
             <h2 className="text-3xl font-black tracking-tighter leading-[1.08] text-[#2D2727]">
-              Built with KGP
+              Community Support
             </h2>
             <p className="text-xs opacity-70 leading-relaxed text-[#2D2727]">
               The goal isn&apos;t to fill ReeWise with everything. It&apos;s to fill it with what actually helps.
