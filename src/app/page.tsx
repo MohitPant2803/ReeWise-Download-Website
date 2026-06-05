@@ -367,7 +367,7 @@ export default function Home() {
                     To be released soon
                   </h3>
                   <p className="text-[11px] opacity-65 leading-relaxed">
-                    The stable version is coming soon. Get started today with the beta version.
+                    The complete ReeWise experience is coming soon. Try the beta for a sneak peek.
                   </p>
                 </div>
 
