@@ -204,10 +204,10 @@ export default function Home() {
         <section id="demo" className="py-12 px-6 space-y-6 text-center">
           <h2 className="text-xl font-bold tracking-tight">See ReeWise in action.</h2>
           
-          <div className="w-full max-w-[380px] aspect-video mx-auto rounded-3xl overflow-hidden shadow-lg border border-black/5 bg-black">
+          <div className="w-full max-w-[260px] aspect-[9/16] mx-auto rounded-3xl overflow-hidden shadow-lg border border-black/5 bg-black">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/Nb5D9XhwYlM"
               title="ReeWise Demo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
