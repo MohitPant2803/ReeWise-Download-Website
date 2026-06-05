@@ -236,7 +236,7 @@ export default function Home() {
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[250px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
+              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[255px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
             >
               {/* Illustration background */}
               <div className="absolute right-[-15px] top-[-15px] opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300 pointer-events-none">
@@ -245,16 +245,16 @@ export default function Home() {
                 </svg>
               </div>
 
-              <div className="space-y-2.5">
-                <h3 className="text-base font-black tracking-tighter text-[#2D2727] leading-tight">
+              <div className="space-y-2">
+                <h3 className="text-sm font-black tracking-tight text-[#2D2727] leading-snug">
                   Request Something
                 </h3>
-                <p className="text-[10px] opacity-60 leading-normal">
+                <p className="text-[10.5px] opacity-60 leading-relaxed">
                   Missing a topic? Want a specific sheet, resource, or set of questions added? Tell me what would make ReeWise more useful.
                 </p>
               </div>
 
-              <div className="pt-2 text-xs font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
+              <div className="pt-2 text-[11px] font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
                 Suggest Material &rarr;
               </div>
             </motion.a>
@@ -265,7 +265,7 @@ export default function Home() {
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[250px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
+              className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[255px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
             >
               {/* Illustration background */}
               <div className="absolute right-[-15px] top-[-15px] opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300 pointer-events-none">
@@ -274,16 +274,16 @@ export default function Home() {
                 </svg>
               </div>
 
-              <div className="space-y-2.5">
-                <h3 className="text-base font-black tracking-tighter text-[#2D2727] leading-tight">
+              <div className="space-y-2">
+                <h3 className="text-sm font-black tracking-tight text-[#2D2727] leading-snug">
                   What Would You Tell Your Younger Self?
                 </h3>
-                <p className="text-[10px] opacity-60 leading-normal">
+                <p className="text-[10.5px] opacity-60 leading-relaxed">
                   If you&apos;ve spent a few years at KGP, gone through CDC season, internships, placements, or just learned things the hard way, what would you tell your younger self?
                 </p>
               </div>
 
-              <div className="pt-2 text-xs font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
+              <div className="pt-2 text-[11px] font-black tracking-tight text-[#8B5CF6] flex items-center gap-0.5 mt-auto">
                 Leave a Message &rarr;
               </div>
             </motion.a>
