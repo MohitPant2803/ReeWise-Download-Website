@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 
 const SHOWCASE_ITEMS = [
@@ -72,6 +72,7 @@ function WatercolorBlob({ index }: { index: number }) {
 }
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-calm-ivory font-sans antialiased selection:bg-brand-lavender/30 flex justify-center overflow-x-hidden">
       
@@ -105,16 +106,14 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-2.5 w-full max-w-[280px] pt-1">
-            <motion.a
+            <motion.button
               whileTap={{ scale: 0.97 }}
-              href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise6/app-release.apk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10"
+              onClick={() => setIsModalOpen(true)}
+              className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
             >
               Download APK
               <ArrowRight className="w-3.5 h-3.5" />
-            </motion.a>
+            </motion.button>
             <motion.a
               whileTap={{ scale: 0.97 }}
               href="#demo"
@@ -303,16 +302,14 @@ export default function Home() {
             </div>
 
             <div className="pt-2 relative z-10">
-              <motion.a
+              <motion.button
                 whileTap={{ scale: 0.97 }}
-                href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise6/app-release.apk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10"
+                onClick={() => setIsModalOpen(true)}
+                className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10 cursor-pointer"
               >
                 Download APK
                 <ArrowRight className="w-3.5 h-3.5" />
-              </motion.a>
+              </motion.button>
             </div>
           </div>
         </section>
@@ -337,6 +334,57 @@ export default function Home() {
             &copy; {new Date().getFullYear()} ReeWise. Free & Open Source.
           </div>
         </footer>
+
+        {/* Modal Overlay */}
+        <AnimatePresence>
+          {isModalOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/60 backdrop-blur-[3px] flex items-center justify-center p-6 z-50"
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 350 }}
+                className="bg-[#FAF9F5] border border-[#EADEC9]/30 rounded-3xl p-6 w-full max-w-[280px] text-center space-y-5 shadow-xl relative"
+              >
+                {/* Close button */}
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="absolute top-4 right-4 text-[#2D2727] opacity-40 hover:opacity-75 p-1 transition-opacity cursor-pointer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                
+                <div className="space-y-1.5 pt-2">
+                  <h3 className="text-base font-black tracking-tight text-[#2D2727]">
+                    To be released soon
+                  </h3>
+                  <p className="text-[11px] opacity-65 leading-relaxed">
+                    The stable version is coming soon. Get started today with the beta version.
+                  </p>
+                </div>
+
+                <motion.a
+                  whileTap={{ scale: 0.97 }}
+                  href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise6/app-release.apk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10"
+                >
+                  Download Beta Version
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </motion.a>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </div>
