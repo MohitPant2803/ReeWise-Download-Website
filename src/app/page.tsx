@@ -330,6 +330,9 @@ export default function Home() {
           <p className="text-[10px] opacity-60 leading-relaxed">
             Made by a kgpian for kgpians.
           </p>
+          <div className="text-[9.5px] opacity-60">
+            Contact: <a href="mailto:mohit.pant1828@gmail.com" className="hover:text-[#8B5CF6] transition-colors underline font-semibold">mohit.pant1828@gmail.com</a>
+          </div>
           <div className="text-[9px] opacity-40">
             &copy; {new Date().getFullYear()} ReeWise. Free & Open Source.
           </div>

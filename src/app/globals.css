@@ -10,7 +10,7 @@
   --color-brand-sage: #E1E8DE;
   --color-accent-amber: #F7E7CE;
   
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
