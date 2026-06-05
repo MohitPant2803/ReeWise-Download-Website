@@ -6,28 +6,28 @@ import { ArrowRight, Play } from "lucide-react";
 
 const SHOWCASE_ITEMS = [
   {
-    title: "Because interviews aren't chapter-wise.",
-    desc: "Random DSA, OS, CN and DBMS cards shunted into a shuffler feed help train recall under uncertainty.",
+    title: "Interview randomness.",
+    desc: "Random DSA, Guesstimates, Case Studies, and Tech cards shunted into a shuffler feed help train recall under uncertainty.",
     src: "/assets/Screenshot_2026-06-03-23-28-40-99_7bac7bd5d063bbad144b7a4a677790c4.jpg"
   },
   {
     title: "Everything important. One calm place.",
-    desc: "DSA, Operating Systems, Computer Networks, DBMS, and System Design together.",
+    desc: "DSA, System Design, Guesstimates, Case Studies, Product Sense, and Data Science together.",
     src: "/assets/Screenshot_2026-06-04-02-41-15-23_7bac7bd5d063bbad144b7a4a677790c4.jpg"
   },
   {
     title: "Active recall under uncertainty.",
-    desc: "Practice high-yield DSA questions with instant tags and difficulty levels.",
+    desc: "Practice high-yield Guesstimates, Case Studies, DSA, and Product problems with instant tags.",
     src: "/assets/Screenshot_2026-06-04-02-41-46-26_7bac7bd5d063bbad144b7a4a677790c4.jpg"
   },
   {
     title: "High-yield solutions.",
-    desc: "Tap once to reveal code blocks, clean examples, and optimized C++ solutions.",
+    desc: "Swipe once to reveal code blocks, step-by-step case frameworks, and optimized solutions.",
     src: "/assets/Screenshot_2026-06-04-02-41-55-39_7bac7bd5d063bbad144b7a4a677790c4.jpg"
   },
   {
     title: "Customized to your needs.",
-    desc: "Filter concepts, C++ code, or choose test vs explanation mode instantly.",
+    desc: "Choose exactly what enters your shuffler feed to face the interview randomness on your own terms.",
     src: "/assets/Screenshot_2026-06-04-02-42-08-65_7bac7bd5d063bbad144b7a4a677790c4.jpg"
   },
   {
@@ -79,7 +79,7 @@ export default function Home() {
         COZY MOBILE-FIRST CONTAINER:
         Visually designed to mirror the purple ReeWise app theme.
       */}
-      <div className="w-full max-w-md bg-[#FAF9F5] text-[#2D2727] min-h-screen flex flex-col justify-between border-x border-[#EADEC9]/40 shadow-xs relative transition-all duration-300 overflow-hidden">
+      <div className="w-full max-w-md bg-[#FAF9F5] doodle-bg text-[#2D2727] min-h-screen flex flex-col justify-between border-x border-[#EADEC9]/40 shadow-xs relative transition-all duration-300 overflow-hidden">
         
         {/* Ambient decorative glowing blobs */}
         <WatercolorBlob index={0} />
@@ -100,7 +100,7 @@ export default function Home() {
               ReeWise
             </h1>
             <p className="text-xs font-semibold opacity-70">
-              A calm, scrollable revision app.
+              DSA, Data, Product, and many more.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ export default function Home() {
               },
               {
                 title: "Ask GPT Instantly",
-                desc: "If a solution doesn't make sense, tap to ask the built-in GPT. You don't have to copy code or leave your revision flow."
+                desc: "If a solution doesn't make sense, one tap copies all the required context and takes you straight to your ChatGPT."
               },
               {
                 title: "Make Revision a Habit",
