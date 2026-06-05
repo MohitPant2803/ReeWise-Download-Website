@@ -188,11 +188,11 @@ export default function Home() {
                 desc: "The easier revision becomes, the more likely you are to actually do it."
               }
             ].map((feature, idx) => (
-              <div key={idx} className="space-y-1.5 text-balance">
-                <h3 className="text-base font-extrabold tracking-tight text-[#2D2727]">
+              <div key={idx} className="space-y-1 text-balance">
+                <h3 className="text-sm font-black tracking-tight text-[#2D2727]">
                   {feature.title}
                 </h3>
-                <p className="text-xs opacity-70 leading-relaxed text-[#2D2727]">
+                <p className="text-[11.5px] opacity-65 leading-relaxed text-[#2D2727]">
                   {feature.desc}
                 </p>
               </div>
