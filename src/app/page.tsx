@@ -107,7 +107,7 @@ export default function Home() {
           <div className="flex flex-col gap-2.5 w-full max-w-[280px] pt-1">
             <motion.a
               whileTap={{ scale: 0.97 }}
-              href="https://google.com"
+              href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise6/app-release.apk"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10"
@@ -305,7 +305,7 @@ export default function Home() {
             <div className="pt-2 relative z-10">
               <motion.a
                 whileTap={{ scale: 0.97 }}
-                href="https://google.com"
+                href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise6/app-release.apk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10"
