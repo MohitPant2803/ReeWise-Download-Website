@@ -233,7 +233,7 @@ export default function Home() {
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
-              href="https://google.com"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd0tHl9LdrZi1qoy2cAV6A4O8wKSBsTINfdH3fsc8ekNajSlA/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className="p-5 bg-white border border-[#EADEC9]/30 rounded-3xl flex flex-col justify-between min-h-[255px] shadow-2xs hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left relative overflow-hidden group"
