@@ -180,8 +180,8 @@ export default function Home() {
                 desc: "Whenever you come across something good, save it and come back to it later."
               },
               {
-                title: "Get Unstuck Quickly",
-                desc: "If something doesn't make sense, you shouldn't have to leave your revision flow to figure it out."
+                title: "Ask GPT Instantly",
+                desc: "If a solution doesn't make sense, tap to ask the built-in GPT. You don't have to copy code or leave your revision flow."
               },
               {
                 title: "Make Revision a Habit",
