@@ -364,7 +364,7 @@ export default function Home() {
                 
                 <div className="space-y-1.5 pt-2">
                   <h3 className="text-base font-black tracking-tight text-[#2D2727]">
-                    To be released soon
+                    Beta Preview
                   </h3>
                   <p className="text-[11px] opacity-65 leading-relaxed">
                     The complete ReeWise experience is coming soon. Try the beta for a sneak peek.
