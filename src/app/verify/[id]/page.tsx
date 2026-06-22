@@ -41,7 +41,7 @@ const CERTIFICATES_DB: Record<string, CertificateData> = {
   },
   "RW-INT-2026-003": {
     id: "RW-INT-2026-003",
-    name: "Smriti Tubit",
+    name: "Smriti Tubid",
     org: "ReeWise",
     role: "Product Management Intern",
     duration: "10 May 2026 – 18 June 2026",
