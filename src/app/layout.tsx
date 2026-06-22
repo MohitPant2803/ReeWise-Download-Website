@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PHProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "ReeWise — Calm Revision",
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <PHProvider>
+        <body className="min-h-full flex flex-col font-sans">{children}</body>
+      </PHProvider>
     </html>
   );
 }
