@@ -27,6 +27,17 @@ const CERTIFICATES_DB: Record<string, CertificateData> = {
     issueDate: "22 June 2026",
     issuedBy: "Mohit",
     issuedByTitle: "Founder, ReeWise"
+  },
+  "RW-INT-2026-002": {
+    id: "RW-INT-2026-002",
+    name: "Chetna Kanesh",
+    org: "ReeWise",
+    role: "Product Management Intern",
+    duration: "10 May 2026 – 18 June 2026",
+    status: "Verified",
+    issueDate: "22 June 2026",
+    issuedBy: "Mohit",
+    issuedByTitle: "Founder, ReeWise"
   }
 };
 
