@@ -99,8 +99,7 @@ export default function CertificateVerificationPage({
                   <h1 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
                     Internship Verified
                   </h1>
-                  <div className="text-[10px] font-bold text-emerald-600 tracking-wider uppercase flex items-center gap-1.5 pt-0.5">
-                    <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                  <div className="text-[10px] font-bold text-emerald-600 tracking-wider pt-0.5">
                     Official ReeWise Record
                   </div>
                 </div>
@@ -166,8 +165,7 @@ export default function CertificateVerificationPage({
                     <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
                       Status
                     </div>
-                    <div className="text-sm font-black tracking-tight text-emerald-600 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+                    <div className="text-sm font-black tracking-tight text-emerald-600">
                       {certData.status}
                     </div>
                   </div>
@@ -239,10 +237,10 @@ export default function CertificateVerificationPage({
 
         {/* Footer */}
         <footer className="px-6 py-8 border-t border-[#EADEC9]/40 bg-[#F5F3FF]/30 text-center space-y-2">
-          <div className="flex justify-center items-center gap-2">
+          <Link href="/" className="inline-flex justify-center items-center gap-2 group cursor-pointer">
             <img src="/assets/icon213.png" alt="ReeWise Logo" className="w-5 h-5 rounded-lg object-cover border border-black/5" />
-            <span className="font-bold text-[11px]">ReeWise</span>
-          </div>
+            <span className="font-bold text-[11px] text-[#2D2727] group-hover:text-[#8B5CF6] transition-colors">ReeWise</span>
+          </Link>
           <div className="text-[9px] opacity-40">
             &copy; {new Date().getFullYear()} ReeWise. All rights reserved.
           </div>
