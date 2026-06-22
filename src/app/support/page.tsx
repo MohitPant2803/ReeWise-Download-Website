@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowLeft, HelpCircle, Mail, MessageSquare, ChevronDown } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 interface FAQItem {
@@ -28,7 +27,7 @@ const FAQS: FAQItem[] = [
     answer: "Yes. While ReeWise is designed with a local-first philosophy, your study streak, card completions, custom folders, and playlists are securely synced to our cloud databases so you don't lose them when switching devices."
   },
   {
-    question: "Who can I contact for partnerships or suggestions?",
+    question: "Who can I contact for feedback or suggestions?",
     answer: "We welcome suggestions for new study decks or feature updates. You can reach out directly via email at reewisesupport@gmail.com or fill out our feedback forms on the home screen."
   }
 ];
@@ -41,112 +40,94 @@ export default function SupportPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F3EF] font-sans antialiased text-[#2D2727] flex justify-center py-10 px-4 relative overflow-hidden">
-      {/* Ambient background blob */}
-      <div className="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-[#8B5CF6]/5 to-transparent blur-[90px] top-[10%] left-[-10%] pointer-events-none -z-10" />
-      <div className="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-[#A78BFA]/5 to-transparent blur-[90px] bottom-[10%] right-[-10%] pointer-events-none -z-10" />
+    <div className="min-h-screen bg-calm-ivory font-sans antialiased selection:bg-brand-lavender/30 flex justify-center overflow-x-hidden">
+      <div className="w-full max-w-md bg-[#FAF9F5] doodle-bg text-[#2D2727] min-h-screen flex flex-col justify-between border-x border-[#EADEC9]/40 shadow-xs relative">
+        
+        {/* Ambient blobs */}
+        <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-tr from-[#8B5CF6]/5 to-transparent blur-[60px] top-[10%] left-[-10%] pointer-events-none -z-10" />
+        <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-tr from-[#A78BFA]/5 to-transparent blur-[60px] bottom-[20%] right-[-10%] pointer-events-none -z-10" />
 
-      <motion.div 
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-2xl bg-[#FAF9F5] border border-[#EADEC9]/40 rounded-3xl p-6 sm:p-8 shadow-xs relative"
-      >
-        {/* Navigation Header */}
-        <div className="flex items-center justify-between border-b border-[#EADEC9]/20 pb-4 mb-6">
-          <Link href="/" className="flex items-center gap-1.5 text-xs font-bold text-[#8B5CF6] hover:opacity-85 transition-all">
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Back to Home
-          </Link>
-          <div className="flex items-center gap-1.5 opacity-60 text-xs font-semibold">
-            <HelpCircle className="w-3.5 h-3.5 text-[#8B5CF6]" />
-            Support Center
+        <div>
+          {/* Header */}
+          <div className="pt-10 pb-4 px-6 flex items-center justify-between border-b border-[#EADEC9]/20">
+            <Link href="/" className="flex items-center gap-1.5 text-xs font-bold text-[#8B5CF6] hover:opacity-85 transition-all">
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Back to Home
+            </Link>
+            <span className="text-[10px] font-bold opacity-60">SUPPORT CENTER</span>
           </div>
-        </div>
 
-        {/* Brand */}
-        <div className="flex items-center gap-3 mb-6">
-          <img src="/assets/icon213.png" alt="ReeWise Logo" className="w-12 h-12 rounded-xl object-cover border border-black/5" />
-          <div>
-            <h1 className="text-2xl font-black tracking-tight leading-none">Support & Help</h1>
-            <p className="text-[10px] font-semibold opacity-60 mt-1">Get assistance, view FAQs, or contact us</p>
+          {/* Title block */}
+          <div className="pt-8 pb-4 px-6 space-y-1">
+            <h1 className="text-3xl font-black tracking-tighter">Support & Help</h1>
+            <p className="text-[10px] font-semibold opacity-60">Get assistance and view FAQs</p>
           </div>
-        </div>
 
-        {/* Support Options Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <a 
-            href="mailto:reewisesupport@gmail.com?subject=ReeWise%20App%20Support%20Request"
-            className="p-5 bg-white border border-[#EADEC9]/30 rounded-2xl flex flex-col justify-between hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left group"
-          >
-            <div className="w-8 h-8 rounded-lg bg-[#8B5CF6]/10 flex items-center justify-center mb-3">
-              <Mail className="w-4 h-4 text-[#8B5CF6]" />
-            </div>
-            <div>
-              <h3 className="text-xs font-black tracking-tight text-[#2D2727] mb-1">Email Support</h3>
-              <p className="text-[10px] opacity-60 leading-normal mb-3">
-                Send a ticket directly to our support inbox. We reply within 24 hours.
+          {/* Content */}
+          <div className="px-6 py-4 space-y-6 text-xs leading-relaxed text-[#2D2727]/90">
+            
+            {/* Contact Support */}
+            <section className="space-y-2">
+              <h2 className="text-sm font-black tracking-tight text-[#8B5CF6]">Contact Us</h2>
+              <p>
+                Have a question, feedback, or need help with sync errors? Send us a ticket and we will get back to you within 24 hours.
               </p>
-              <span className="text-[11px] font-bold text-[#8B5CF6] group-hover:underline">
-                reewisesupport@gmail.com
-              </span>
-            </div>
-          </a>
-
-          <Link
-            href="/delete-account"
-            className="p-5 bg-white border border-[#EADEC9]/30 rounded-2xl flex flex-col justify-between hover:shadow-xs hover:border-[#8B5CF6]/20 transition-all text-left group"
-          >
-            <div className="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center mb-3">
-              <MessageSquare className="w-4 h-4 text-red-500" />
-            </div>
-            <div>
-              <h3 className="text-xs font-black tracking-tight text-[#2D2727] mb-1">Data & Deletion</h3>
-              <p className="text-[10px] opacity-60 leading-normal mb-3">
-                Need to delete your account or download your personal data records?
-              </p>
-              <span className="text-[11px] font-bold text-red-500 group-hover:underline">
-                Manage Data &rarr;
-              </span>
-            </div>
-          </Link>
-        </div>
-
-        {/* FAQs */}
-        <div className="space-y-4">
-          <h2 className="text-lg font-black tracking-tight text-[#8B5CF6] mb-3">Frequently Asked Questions</h2>
-          <div className="space-y-2">
-            {FAQS.map((faq, index) => (
-              <div 
-                key={index} 
-                className="bg-white border border-[#EADEC9]/30 rounded-xl overflow-hidden transition-all duration-200"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-5 py-4 text-left flex justify-between items-center font-bold text-xs hover:bg-[#F5F3EF]/20 transition-colors cursor-pointer"
+              <div className="pt-2">
+                <a 
+                  href="mailto:reewisesupport@gmail.com?subject=ReeWise%20App%20Support%20Request"
+                  className="inline-block py-2.5 px-5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white font-bold rounded-xl transition-all cursor-pointer text-center"
                 >
-                  <span>{faq.question}</span>
-                  <ChevronDown 
-                    className={`w-4 h-4 text-[#8B5CF6] transition-transform duration-200 shrink-0 ml-2 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`} 
-                  />
-                </button>
-                {openIndex === index && (
-                  <div className="px-5 pb-4 text-xs opacity-75 border-t border-[#EADEC9]/10 pt-3 leading-relaxed">
-                    {faq.answer}
-                  </div>
-                )}
+                  Email Support (reewisesupport@gmail.com)
+                </a>
               </div>
-            ))}
+            </section>
+
+            <hr className="border-[#EADEC9]/20" />
+
+            {/* FAQs */}
+            <section className="space-y-3">
+              <h2 className="text-sm font-black tracking-tight text-[#8B5CF6]">Frequently Asked Questions</h2>
+              <div className="space-y-2">
+                {FAQS.map((faq, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-white border border-[#EADEC9]/20 rounded-xl overflow-hidden transition-all duration-200"
+                  >
+                    <button
+                      onClick={() => toggleFAQ(index)}
+                      className="w-full px-4 py-3 text-left flex justify-between items-center font-bold text-xs hover:bg-[#F5F3EF]/20 transition-colors cursor-pointer"
+                    >
+                      <span className="pr-4">{faq.question}</span>
+                      <ChevronDown 
+                        className={`w-3.5 h-3.5 text-[#8B5CF6] transition-transform duration-200 shrink-0 ${
+                          openIndex === index ? "rotate-180" : ""
+                        }`} 
+                      />
+                    </button>
+                    {openIndex === index && (
+                      <div className="px-4 pb-3 text-xs opacity-75 border-t border-[#EADEC9]/10 pt-2 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="border-t border-[#EADEC9]/20 pt-4 mt-8 text-center text-[10px] opacity-50 font-semibold">
-          © {new Date().getFullYear()} ReeWise. All rights reserved.
-        </div>
-      </motion.div>
+        <footer className="px-6 py-8 border-t border-[#EADEC9]/40 bg-[#F5F3FF]/30 text-center space-y-2">
+          <div className="flex justify-center items-center gap-2">
+            <img src="/assets/icon213.png" alt="ReeWise Logo" className="w-5 h-5 rounded-lg object-cover border border-black/5" />
+            <span className="font-bold text-[11px]">ReeWise</span>
+          </div>
+          <div className="text-[9px] opacity-40">
+            &copy; {new Date().getFullYear()} ReeWise. All rights reserved.
+          </div>
+        </footer>
+
+      </div>
     </div>
   );
 }
