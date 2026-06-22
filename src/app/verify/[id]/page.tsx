@@ -1,8 +1,7 @@
 "use client";
 
 import React, { use, useState } from "react";
-import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Copy, Check, AlertCircle } from "lucide-react";
+import { ShieldCheck, Copy, Check, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 interface CertificateData {
@@ -31,25 +30,14 @@ const CERTIFICATES_DB: Record<string, CertificateData> = {
   }
 };
 
-// Ambient blob shape helper
+// Ambient static blob shape helper (no animation)
 function WatercolorBlob({ index }: { index: number }) {
-  const animateParams = [
-    { x: [0, 15, -10, 0], y: [0, -20, 15, 0], scale: [1, 1.1, 0.9, 1] },
-    { x: [0, -20, 20, 0], y: [0, 15, -20, 0], scale: [1, 0.95, 1.05, 1] }
-  ][index % 2];
-
   const gradientClass = index % 2 === 0 
     ? "from-[#8B5CF6]/10 to-transparent" 
     : "from-[#A78BFA]/10 to-transparent";
 
   return (
-    <motion.div
-      animate={animateParams}
-      transition={{
-        duration: 12 + index * 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
+    <div
       className={`absolute w-[220px] h-[220px] rounded-full bg-gradient-to-tr ${gradientClass} blur-[60px] pointer-events-none -z-10`}
       style={{
         left: index % 2 === 0 ? "-15%" : "auto",
@@ -82,7 +70,7 @@ export default function CertificateVerificationPage({
     <div className="min-h-screen bg-calm-ivory font-sans antialiased selection:bg-brand-lavender/30 flex justify-center overflow-x-hidden">
       <div className="w-full max-w-md bg-[#FAF9F5] doodle-bg text-[#2D2727] min-h-screen flex flex-col justify-between border-x border-[#EADEC9]/40 shadow-xs relative">
         
-        {/* Ambient decorative blobs */}
+        {/* Ambient decorative blobs (static) */}
         <WatercolorBlob index={0} />
         <WatercolorBlob index={1} />
 
@@ -105,22 +93,14 @@ export default function CertificateVerificationPage({
           {/* Page Content */}
           <div className="px-6 py-8">
             {certData ? (
-              <motion.div 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="space-y-8"
-              >
+              <div className="space-y-8">
                 {/* Title / Verification Status */}
                 <div className="space-y-1.5 pb-2">
                   <h1 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
                     Internship Verified
                   </h1>
                   <div className="text-[10px] font-bold text-emerald-600 tracking-wider uppercase flex items-center gap-1.5 pt-0.5">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                    </span>
+                    <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
                     Official ReeWise Record
                   </div>
                 </div>
@@ -187,7 +167,7 @@ export default function CertificateVerificationPage({
                       Status
                     </div>
                     <div className="text-sm font-black tracking-tight text-emerald-600 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
                       {certData.status}
                     </div>
                   </div>
@@ -210,8 +190,7 @@ export default function CertificateVerificationPage({
 
                 {/* Actions */}
                 <div className="flex flex-col gap-2.5 pt-4">
-                  <motion.button
-                    whileTap={{ scale: 0.97 }}
+                  <button
                     onClick={handleCopyLink}
                     className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
                   >
@@ -226,20 +205,16 @@ export default function CertificateVerificationPage({
                         Copy Verification Link
                       </>
                     )}
-                  </motion.button>
+                  </button>
                 </div>
 
                 <p className="text-[10px] text-center opacity-50 leading-relaxed max-w-[260px] mx-auto pt-2">
                   This document serves as secure digital verification that the recipient successfully completed their internship.
                 </p>
 
-              </motion.div>
+              </div>
             ) : (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center space-y-6 pt-10"
-              >
+              <div className="text-center space-y-6 pt-10">
                 <div className="w-14 h-14 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center border border-red-500/20 mx-auto">
                   <AlertCircle className="w-7 h-7" />
                 </div>
@@ -257,7 +232,7 @@ export default function CertificateVerificationPage({
                 >
                   Go to Homepage
                 </Link>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
