@@ -102,7 +102,7 @@ export default function Home() {
               ReeWise
             </h1>
             <p className="text-xs font-semibold opacity-70">
-              Making revision convinient...
+              Making revision convenient...
             </p>
           </div>
 
