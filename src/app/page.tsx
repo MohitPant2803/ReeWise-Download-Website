@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 
 const SHOWCASE_ITEMS = [
   {
@@ -111,7 +112,7 @@ export default function Home() {
               onClick={() => setIsModalOpen(true)}
               className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
             >
-              Download APK
+              Get ReeWise
               <ArrowRight className="w-3.5 h-3.5" />
             </motion.button>
             <motion.a
@@ -307,7 +308,7 @@ export default function Home() {
                 onClick={() => setIsModalOpen(true)}
                 className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10 cursor-pointer"
               >
-                Download APK
+                Get ReeWise App
                 <ArrowRight className="w-3.5 h-3.5" />
               </motion.button>
             </div>
@@ -315,7 +316,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="px-6 py-10 border-t border-[#EADEC9]/40 bg-[#F5F3FF]/30 text-center space-y-3 transition-all duration-300">
+        <footer className="px-6 py-10 border-t border-[#EADEC9]/40 bg-[#F5F3FF]/30 text-center space-y-4 transition-all duration-300">
           <div className="flex justify-center items-center gap-2.5">
             <img 
               src="/assets/icon213.png" 
@@ -327,8 +328,20 @@ export default function Home() {
           <p className="text-[10px] opacity-60 leading-relaxed">
             Made by a kgpian for kgpians.
           </p>
+          
+          {/* Quick Compliance Links */}
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] font-bold text-[#8B5CF6]/90">
+            <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+            <span className="opacity-30">•</span>
+            <Link href="/terms" className="hover:underline">Terms of Service</Link>
+            <span className="opacity-30">•</span>
+            <Link href="/delete-account" className="hover:underline">Delete Account</Link>
+            <span className="opacity-30">•</span>
+            <Link href="/support" className="hover:underline">Support & Help</Link>
+          </div>
+
           <div className="text-[9.5px] opacity-60">
-            Contact: <a href="mailto:mohit.pant1828@gmail.com" className="hover:text-[#8B5CF6] transition-colors underline font-semibold">mohit.pant1828@gmail.com</a>
+            Contact: <a href="mailto:reewisesupport@gmail.com" className="hover:text-[#8B5CF6] transition-colors underline font-semibold">reewisesupport@gmail.com</a>
           </div>
           <div className="text-[9px] opacity-40">
             &copy; {new Date().getFullYear()} ReeWise. Free & Open Source.
@@ -364,23 +377,21 @@ export default function Home() {
                 
                 <div className="space-y-1.5 pt-2">
                   <h3 className="text-base font-black tracking-tight text-[#2D2727]">
-                    Beta Preview
+                    Google Play Store
                   </h3>
                   <p className="text-[11px] opacity-65 leading-relaxed">
-                    The complete ReeWise experience is coming soon. Try the beta for a sneak peek.
+                    ReeWise is coming soon to the Google Play Store. To ensure your safety, we do not distribute raw APK installation packages.
                   </p>
                 </div>
 
-                <motion.a
-                  whileTap={{ scale: 0.97 }}
-                  href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/app-arm64-v8a-release.apk"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/support"
+                  onClick={() => setIsModalOpen(false)}
                   className="w-full py-3 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10"
                 >
-                  Download Beta Version
+                  Visit Support Center
                   <ArrowRight className="w-3.5 h-3.5" />
-                </motion.a>
+                </Link>
               </motion.div>
             </motion.div>
           )}
