@@ -88,22 +88,18 @@ export default function CertificateVerificationPage({
 
         <div>
           {/* Header */}
-          <div className="pt-8 pb-4 px-6 flex items-center justify-between border-b border-[#EADEC9]/25">
+          <div className="pt-10 pb-4 px-6 flex items-center justify-between border-b border-[#EADEC9]/25">
             <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-              <motion.img 
-                whileHover={{ scale: 1.05, rotate: 4 }}
+              <img 
                 src="/assets/icon213.png" 
                 alt="ReeWise Logo" 
-                className="w-7 h-7 rounded-lg object-cover shadow-sm border border-black/5"
+                className="w-6.5 h-6.5 rounded-lg object-cover shadow-xs border border-black/5"
               />
-              <span className="font-extrabold text-sm tracking-tight text-[#2D2727] group-hover:text-[#8B5CF6] transition-colors">
+              <span className="font-extrabold text-xs tracking-tight text-[#2D2727] group-hover:text-[#8B5CF6] transition-colors">
                 ReeWise
               </span>
             </Link>
-            <div className="flex items-center gap-1 text-[10px] font-bold text-[#8B5CF6] bg-[#8B5CF6]/5 px-2 py-0.5 rounded-full border border-[#8B5CF6]/15">
-              <ShieldCheck className="w-3 h-3" />
-              SECURED
-            </div>
+            <span className="text-[10px] font-extrabold opacity-60 tracking-wider">VERIFICATION</span>
           </div>
 
           {/* Page Content */}
@@ -113,95 +109,111 @@ export default function CertificateVerificationPage({
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="space-y-6"
+                className="space-y-8"
               >
-                {/* Status Section */}
-                <div className="text-center space-y-2 flex flex-col items-center">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
-                    className="w-14 h-14 bg-emerald-500/10 text-emerald-600 rounded-full flex items-center justify-center border border-emerald-500/20 shadow-xs"
-                  >
-                    <CheckCircle2 className="w-7 h-7" />
-                  </motion.div>
-                  <div className="space-y-0.5">
-                    <h2 className="text-xl font-black tracking-tight text-[#2D2727]">
-                      Internship Verified
-                    </h2>
-                    <p className="text-[10px] font-bold text-emerald-600 tracking-wider uppercase">
-                      Official ReeWise Record
-                    </p>
+                {/* Title / Verification Status */}
+                <div className="space-y-1.5 pb-2">
+                  <h1 className="text-3xl font-black tracking-tighter leading-[1.08] text-balance">
+                    Internship Verified
+                  </h1>
+                  <div className="text-[10px] font-bold text-emerald-600 tracking-wider uppercase flex items-center gap-1.5 pt-0.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Official ReeWise Record
                   </div>
                 </div>
 
-                {/* Certificate Details Card */}
-                <div className="bg-white/75 backdrop-blur-xs border border-[#EADEC9]/40 rounded-3xl p-5 shadow-xs space-y-4 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/[0.02] rounded-full blur-xl pointer-events-none" />
+                {/* Details list styled like Homepage Features flow */}
+                <div className="space-y-7 pt-2">
                   
-                  {/* Decorative corner borders */}
-                  <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-[#EADEC9]" />
-                  <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-[#EADEC9]" />
-                  <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-[#EADEC9]" />
-                  <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-[#EADEC9]" />
-
-                  <div className="space-y-3.5 divide-y divide-[#EADEC9]/20 text-[11px]">
-                    
-                    <div className="flex justify-between items-start pt-0">
-                      <span className="font-semibold opacity-60">Certificate ID</span>
-                      <span className="font-mono font-bold text-right text-[#8B5CF6]">{certData.id}</span>
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Certificate ID
                     </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Issued To</span>
-                      <span className="font-extrabold text-right">{certData.name}</span>
+                    <div className="text-sm font-bold font-mono text-[#8B5CF6]">
+                      {certData.id}
                     </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Organization</span>
-                      <span className="font-bold text-right">{certData.org}</span>
-                    </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Role</span>
-                      <span className="font-extrabold text-right text-[#8B5CF6]">{certData.role}</span>
-                    </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Duration</span>
-                      <span className="font-bold text-right">{certData.duration}</span>
-                    </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Issue Date</span>
-                      <span className="font-bold text-right">{certData.issueDate}</span>
-                    </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Status</span>
-                      <span className="font-bold text-right text-emerald-600 flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                        {certData.status}
-                      </span>
-                    </div>
-
-                    <div className="flex justify-between items-start pt-3">
-                      <span className="font-semibold opacity-60">Issued By</span>
-                      <div className="text-right">
-                        <div className="font-extrabold">{certData.issuedBy}</div>
-                        <div className="text-[9px] opacity-60">{certData.issuedByTitle}</div>
-                      </div>
-                    </div>
-
                   </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Issued To
+                    </div>
+                    <h3 className="text-base font-black tracking-tight text-[#2D2727]">
+                      {certData.name}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Organization
+                    </div>
+                    <p className="text-sm font-black tracking-tight text-[#2D2727]">
+                      {certData.org}
+                    </p>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Role
+                    </div>
+                    <p className="text-sm font-black tracking-tight text-[#8B5CF6]">
+                      {certData.role}
+                    </p>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Internship Duration
+                    </div>
+                    <p className="text-sm font-black tracking-tight text-[#2D2727]">
+                      {certData.duration}
+                    </p>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Issue Date
+                    </div>
+                    <p className="text-sm font-black tracking-tight text-[#2D2727]">
+                      {certData.issueDate}
+                    </p>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Status
+                    </div>
+                    <div className="text-sm font-black tracking-tight text-emerald-600 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                      {certData.status}
+                    </div>
+                  </div>
+
+                  <div className="space-y-1 text-balance">
+                    <div className="text-[9.5px] font-bold uppercase tracking-wider opacity-50">
+                      Issued By
+                    </div>
+                    <div className="space-y-0.5">
+                      <h3 className="text-sm font-black tracking-tight text-[#2D2727]">
+                        {certData.issuedBy}
+                      </h3>
+                      <p className="text-[10px] opacity-60 leading-relaxed font-semibold">
+                        {certData.issuedByTitle}
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-col gap-2 pt-2">
+                <div className="flex flex-col gap-2.5 pt-4">
                   <motion.button
-                    whileTap={{ scale: 0.98 }}
+                    whileTap={{ scale: 0.97 }}
                     onClick={handleCopyLink}
-                    className="w-full py-3 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-[11px] font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
+                    className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
                   >
                     {copied ? (
                       <>
@@ -217,7 +229,7 @@ export default function CertificateVerificationPage({
                   </motion.button>
                 </div>
 
-                <p className="text-[10px] text-center opacity-50 leading-relaxed max-w-[280px] mx-auto pt-2">
+                <p className="text-[10px] text-center opacity-50 leading-relaxed max-w-[260px] mx-auto pt-2">
                   This document serves as secure digital verification that the recipient successfully completed their internship.
                 </p>
 
@@ -241,7 +253,7 @@ export default function CertificateVerificationPage({
                 </div>
                 <Link 
                   href="/"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8B5CF6] hover:opacity-85 transition-all bg-[#8B5CF6]/5 px-4 py-2.5 rounded-xl border border-[#8B5CF6]/15"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8B5CF6] hover:opacity-85 transition-all bg-[#8B5CF6]/5 px-4 py-2.5 rounded-xl border border-[#8B5CF6]/15 cursor-pointer"
                 >
                   Go to Homepage
                 </Link>
