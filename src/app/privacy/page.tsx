@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
             <section className="space-y-2">
               <h2 className="text-sm font-black tracking-tight text-[#8B5CF6]">1. Overview</h2>
               <p>
-                At ReeWise, we are committed to providing a calm, focused learning environment for computer science revision. We believe in transparency and data minimalization. This Privacy Policy explains what data we collect, how it is stored and synced, and how you can exercise full control over your personal information.
+                At ReeWise, we are committed to providing a calm, focused learning environment for active recall revision across multiple domains, including Data Science, Quant, Product Management, Case Studies, and Software Engineering. We believe in transparency and data minimalization. This Privacy Policy explains what data we collect, how it is stored and synced, and how you can exercise full control over your personal information.
               </p>
             </section>
 

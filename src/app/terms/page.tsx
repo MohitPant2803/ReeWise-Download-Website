@@ -42,7 +42,7 @@ export default function TermsOfService() {
             <section className="space-y-2">
               <h2 className="text-sm font-black tracking-tight text-[#8B5CF6]">2. Educational Use</h2>
               <p>
-                ReeWise provides study aids, algorithms, and revision cards specifically designed for computer science and data structures/algorithms. These resources are intended solely for educational and self-study purposes. We do not guarantee employment, academic grading success, or specific testing results.
+                ReeWise provides study aids, algorithms, and active recall revision cards specifically designed for multiple domains, including Software Engineering, Data Science, Quant, Case Studies, and Product Management. These resources are intended solely for educational and self-study purposes. We do not guarantee employment, academic grading success, or specific testing results.
               </p>
             </section>
 
