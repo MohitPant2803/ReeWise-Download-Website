@@ -106,19 +106,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-2.5 w-full max-w-[280px] pt-1">
-            <motion.button
+          <div className="flex flex-col gap-2 w-full max-w-[280px] pt-1 items-center">
+            <motion.a
               whileTap={{ scale: 0.97 }}
-              onClick={() => setIsModalOpen(true)}
+              href="https://github.com/MohitPant2803/ReeWise-Download-Website/releases/latest/download/reewise.apk"
               className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
             >
-              Get ReeWise
+              Download/Update APK
               <ArrowRight className="w-3.5 h-3.5" />
-            </motion.button>
+            </motion.a>
+            <p className="text-[10px] opacity-60 font-semibold text-center mt-[-2px]">
+              Coming to Play Store soon
+            </p>
             <motion.a
               whileTap={{ scale: 0.97 }}
               href="#demo"
-              className="w-full py-3 bg-black/5 hover:bg-black/10 text-[#2D2727] text-xs font-semibold rounded-xl transition-all flex items-center justify-center gap-1.5"
+              className="w-full py-3 bg-black/5 hover:bg-black/10 text-[#2D2727] text-xs font-semibold rounded-xl transition-all flex items-center justify-center gap-1.5 mt-1"
             >
               <Play className="w-3.5 h-3.5 fill-[#2D2727]" />
               Watch Demo
@@ -302,15 +305,18 @@ export default function Home() {
               <p className="text-sm opacity-90 font-medium">Download ReeWise.</p>
             </div>
 
-            <div className="pt-2 relative z-10">
-              <motion.button
+            <div className="pt-2 relative z-10 flex flex-col items-center gap-2">
+              <motion.a
                 whileTap={{ scale: 0.97 }}
-                onClick={() => setIsModalOpen(true)}
+                href="https://github.com/MohitPant2803/ReeWise-Download-Website/releases/latest/download/reewise.apk"
                 className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10 cursor-pointer"
               >
-                Get ReeWise App
+                Download/Update APK
                 <ArrowRight className="w-3.5 h-3.5" />
-              </motion.button>
+              </motion.a>
+              <p className="text-[11px] opacity-90 font-bold text-white/95 text-center">
+                Coming to Play Store soon
+              </p>
             </div>
           </div>
         </section>
