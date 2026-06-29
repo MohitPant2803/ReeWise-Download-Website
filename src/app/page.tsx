@@ -109,7 +109,7 @@ export default function Home() {
           <div className="flex flex-col gap-2 w-full max-w-[280px] pt-1 items-center">
             <motion.a
               whileTap={{ scale: 0.97 }}
-              href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/app-release.apk"
+              href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/ReeWise-v1.0.13-arm64-v8a.apk"
               className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
             >
               Download/Update APK
@@ -308,7 +308,7 @@ export default function Home() {
             <div className="pt-2 relative z-10 flex flex-col items-center gap-2">
               <motion.a
                 whileTap={{ scale: 0.97 }}
-                href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/app-release.apk"
+                href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/ReeWise-v1.0.13-arm64-v8a.apk"
                 className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10 cursor-pointer"
               >
                 Download/Update APK
