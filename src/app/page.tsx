@@ -109,17 +109,6 @@ export default function Home() {
           <div className="flex flex-col gap-2 w-full max-w-[280px] pt-1 items-center">
             <motion.a
               whileTap={{ scale: 0.97 }}
-              href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/ReeWise-v1.0.13-arm64-v8a.apk"
-              className="w-full py-3.5 bg-[#8B5CF6] hover:bg-[#7c3aed] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 cursor-pointer"
-            >
-              Download/Update APK
-              <ArrowRight className="w-3.5 h-3.5" />
-            </motion.a>
-            <p className="text-[10px] opacity-60 font-semibold text-center mt-[-2px]">
-              Coming to Play Store soon
-            </p>
-            <motion.a
-              whileTap={{ scale: 0.97 }}
               href="#demo"
               className="w-full py-3 bg-black/5 hover:bg-black/10 text-[#2D2727] text-xs font-semibold rounded-xl transition-all flex items-center justify-center gap-1.5 mt-1"
             >
@@ -293,33 +282,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 7 — DOWNLOAD CTA */}
-        <section className="px-6 py-12">
-          <div className="bg-gradient-to-tr from-[#7C3AED] via-[#8B5CF6] to-[#A78BFA] text-white rounded-3xl p-8 text-center space-y-6 shadow-xl shadow-purple-500/15 overflow-hidden relative">
-            <div className="absolute top-[-30px] left-[-30px] w-36 h-36 bg-white/10 rounded-full blur-[30px] pointer-events-none" />
-            
-            <div className="space-y-2 relative z-10">
-              <h2 className="text-2xl font-black tracking-tighter leading-none">
-                Built for revisiting.
-              </h2>
-              <p className="text-sm opacity-90 font-medium">Download ReeWise.</p>
-            </div>
 
-            <div className="pt-2 relative z-10 flex flex-col items-center gap-2">
-              <motion.a
-                whileTap={{ scale: 0.97 }}
-                href="https://github.com/MohitPant2803/DSA-REVISON-frontend/releases/download/ReeWise7/ReeWise-v1.0.13-arm64-v8a.apk"
-                className="w-full py-4 bg-white text-[#8B5CF6] hover:bg-[#FAF9F5] text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-black/10 cursor-pointer"
-              >
-                Download/Update APK
-                <ArrowRight className="w-3.5 h-3.5" />
-              </motion.a>
-              <p className="text-[11px] opacity-90 font-bold text-white/95 text-center">
-                Coming to Play Store soon
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Footer */}
         <footer className="px-6 py-10 border-t border-[#EADEC9]/40 bg-[#F5F3FF]/30 text-center space-y-4 transition-all duration-300">
