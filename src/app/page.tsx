@@ -199,7 +199,7 @@ export default function Home() {
           <div className="w-full max-w-[260px] aspect-[9/16] mx-auto rounded-3xl overflow-hidden shadow-lg border border-black/5 bg-black">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/Nb5D9XhwYlM"
+              src="https://www.youtube-nocookie.com/embed/Nb5D9XhwYlM"
               title="ReeWise Demo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
