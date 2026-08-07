@@ -113,12 +113,12 @@ export default function Home() {
               href="https://play.google.com/store/apps/details?id=com.mohit.dsareels&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center"
+              className="w-full rounded-xl overflow-hidden"
             >
               <img
                 src="/google-play-badge.png"
                 alt="Get it on Google Play"
-                className="h-14 w-auto object-contain"
+                className="w-full h-12 object-cover object-center"
               />
             </motion.a>
 
