@@ -118,7 +118,7 @@ export default function Home() {
               <img
                 src="/google-play-badge.png"
                 alt="Get it on Google Play"
-                className="h-7 w-auto object-contain"
+                className="h-9 w-auto object-contain"
               />
             </motion.a>
 
