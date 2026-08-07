@@ -109,8 +109,25 @@ export default function Home() {
           <div className="flex flex-col gap-2 w-full max-w-[280px] pt-1 items-center">
             <motion.a
               whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.02 }}
+              href="https://play.google.com/store/apps/details?id=com.mohit.dsareels&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 bg-[#01875f] hover:bg-[#017a55] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-[#01875f]/20"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.18 23.76c.3.17.65.19.97.07L15.93 12 11.94 8 3.18 23.76z"/>
+                <path d="M22.54 10.25l-3.2-1.83-4.24 3.58 4.24 3.58 3.23-1.85c.92-.53.92-2.96-.03-3.48z"/>
+                <path d="M2.25.28C2.01.52 1.875.89 1.875 1.37v21.26c0 .48.135.85.375 1.09L15.2 12 2.25.28z"/>
+                <path d="M11.94 12l3.99-3.99L3.15.31C2.82.18 2.48.2 2.18.37L11.94 12z"/>
+              </svg>
+              Get on Google Play
+            </motion.a>
+
+            <motion.a
+              whileTap={{ scale: 0.97 }}
               href="#demo"
-              className="w-full py-3 bg-black/5 hover:bg-black/10 text-[#2D2727] text-xs font-semibold rounded-xl transition-all flex items-center justify-center gap-1.5 mt-1"
+              className="w-full py-3 bg-black/5 hover:bg-black/10 text-[#2D2727] text-xs font-semibold rounded-xl transition-all flex items-center justify-center gap-1.5"
             >
               <Play className="w-3.5 h-3.5 fill-[#2D2727]" />
               Watch Demo
