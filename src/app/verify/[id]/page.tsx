@@ -66,9 +66,9 @@ const CERTIFICATES_DB: Record<string, CertificateData> = {
     name: "Shobhit Pant",
     org: "ReeWise",
     role: "Product Management Intern",
-    duration: "10 May 2026 – 18 June 2026",
+    duration: "20 July 2026 – 28 August 2026",
     status: "Verified",
-    issueDate: "22 June 2026",
+    issueDate: "28 August 2026",
     issuedBy: "Mohit",
     issuedByTitle: "Founder, ReeWise"
   }
